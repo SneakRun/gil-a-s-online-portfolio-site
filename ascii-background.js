@@ -86,16 +86,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Main drawing function
       function draw() {
-        console.log("Drawing frame");
         // Clear the canvas
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = getComputedColor('--ascii-background-color');
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Get mouse position (default to 0 if not set)
         const mouseX = window.mouseX || 0;
         const mouseY = window.mouseY || 0;
 
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = getComputedColor('--ascii-text-color');
         for (let y = 0; y < rows; y++) {
             for (let x = 0; x < cols; x++) {
                 // Calculate distance from current position to mouse
@@ -152,11 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       // Log when draw function is called
-      const originalDraw = draw;
-      draw = function() {
-        console.log("Drawing frame");
-        originalDraw();
-      };
+      // const originalDraw = draw;
+      // draw = function() {
+      //   // Remove or comment out the console.log here
+      //   originalDraw();
+      // };
 
       // Log when mouse movement is detected
       const originalHandleMouseMove = handleMouseMove;
@@ -174,3 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error("Error in ASCII background script:", error);
   }
 });
+
+function getComputedColor(varName) {
+  return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+}

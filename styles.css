@@ -137,3 +137,8 @@ img {
     z-index: -1;
     pointer-events: none;
 }
+
+:root {
+  --ascii-background-color: rgb(27, 31, 56);
+  --ascii-text-color: rgb(111, 124, 145);
+}
