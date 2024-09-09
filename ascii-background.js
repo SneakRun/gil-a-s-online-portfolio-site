@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Constants for noise generation and animation
       const noiseScale = 0.05;
       const brushSize = 50;
-      const timeFactor = 0.01;
+      const timeFactor = 0.003; // Half the original speed
       let zOffset = 0;
       let animationFrameId;
 
