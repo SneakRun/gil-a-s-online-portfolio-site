@@ -135,4 +135,25 @@
 
   // Start the animation
   init();
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const asciiContainer = document.getElementById('ascii-background');
+    
+    function generateAsciiArt() {
+        // Your ASCII art generation logic here
+        // For example:
+        let asciiArt = '';
+        for (let i = 0; i < 1000; i++) {
+            asciiArt += String.fromCharCode(33 + Math.floor(Math.random() * 94));
+        }
+        return asciiArt;
+    }
+
+    function updateBackground() {
+        asciiContainer.textContent = generateAsciiArt();
+        requestAnimationFrame(updateBackground);
+    }
+
+    updateBackground();
+  });
 })();
