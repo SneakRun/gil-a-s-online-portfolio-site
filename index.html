@@ -3,50 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .portfolio-grid img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        @media (max-width: 1024px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-  <header>
-    <h1>Gil Altarace Sherman</h1>
-  </header>
-  <div class="portfolio-grid">
-      <img src="https://via.placeholder.com/300" alt="Portfolio item 1">
-      <img src="https://via.placeholder.com/300" alt="Portfolio item 2">
-      <img src="https://via.placeholder.com/300" alt="Portfolio item 3">
-      <img src="https://via.placeholder.com/300" alt="Portfolio item 4">
-      <!-- Add more images as needed -->
-  </div>
-</body>
+    <title>Gil Altarace Sherman - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Gil Altarace Sherman</h1>
+    </header>
+    <div class="portfolio-grid">
+      <a href="project1.html" class="portfolio-item">
+        <div class="placeholder-image"></div>
+        <div class="overlay">Project 1</div>
+      </a>
+      <a href="project2.html" class="portfolio-item">
+        <div class="placeholder-image"></div>
+        <div class="overlay">Project 2</div>
+      </a>
+      <a href="project3.html" class="portfolio-item">
+        <div class="placeholder-image"></div>
+        <div class="overlay">Project 3</div>
+      </a>
+      <a href="project4.html" class="portfolio-item">
+        <div class="placeholder-image"></div>
+        <div class="overlay">Project 4</div>
+      </a>
+      <!-- Add more items as needed -->
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
