@@ -139,14 +139,14 @@ img {
 .menu-bar {
     width: 20%;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 100vh;
+    height: calc(100vh - 80px); /* Adjust 80px to match your header height */
     position: fixed;
     left: 0;
-    top: 0;
+    top: 80px; /* Should match your header height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 80px;
+    padding-top: 20px;
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -186,13 +186,17 @@ img {
     margin-left: 20%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 80px;
+    margin-top: 80px; /* Should match your header height */
 }
 
 @media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
     .fixed-header {
         width: 100%;
-        height: auto;
+        height: 60px; /* Adjust as needed */
         padding: 10px 0;
         position: fixed;
         top: 0;
@@ -207,16 +211,15 @@ img {
 
     .menu-bar {
         width: 100%;
-        height: auto;
+        height: 60px; /* Adjust as needed */
         position: fixed;
-        top: 40px; /* Adjust based on your header height */
+        top: 60px; /* Should match the header height */
         left: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1001;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .menu-bar nav {
@@ -242,13 +245,17 @@ img {
     .content-area {
         width: 100%;
         margin-left: 0;
-        margin-top: 90px; /* Adjust based on header + menu height */
+        margin-top: 120px; /* Adjust based on header + menu height */
         padding-top: 20px;
     }
 }
 
 /* Add a new media query for very small screens */
 @media (max-width: 480px) {
+    .menu-bar {
+        height: auto;
+    }
+
     .menu-bar ul {
         flex-direction: column;
         align-items: center;
