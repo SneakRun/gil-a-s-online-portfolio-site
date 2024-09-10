@@ -355,19 +355,12 @@ img {
     overflow: hidden; /* Prevents scrolling on the main container */
 }
 
-.mobile-menu-background {
-    display: none;
-}
-
 @media (max-width: 768px) {
-    .mobile-menu-background {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 90px; /* Adjust based on your header + menu height */
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+        padding-top: 120px; /* Adjust based on header + menu height */
     }
 }
+
