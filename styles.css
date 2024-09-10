@@ -145,6 +145,7 @@ img {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    opacity: 0.5; /* Adjust this value to change opacity */
 }
 
 /* blue/grey colour scheme */
