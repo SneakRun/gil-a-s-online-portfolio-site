@@ -82,15 +82,152 @@ img {
     opacity: 1;
 }
 
+.placeholder-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #cccccc;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    word-break: break-word;
+    hyphens: auto;
+    color: #fff;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.menu-bar {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.menu-bar .main-title {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+}
+
+.menu-bar nav {
+    width: 100%;
+    z-index: 1002;
+    position: relative;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-bar li {
+    margin: 15px 0;
+}
+
+.menu-bar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+    color: #ddd;
+}
+
+.content-area {
+    width: 80%;
+    margin-left: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 @media (max-width: 1200px) {
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
 @media (max-width: 900px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-bar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .menu-bar .main-title {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .menu-bar nav {
+        width: auto;
+    }
+
+    .menu-bar ul {
+        flex-direction: row;
+    }
+
+    .menu-bar li {
+        margin: 0 10px;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 60px; /* Adjust based on the height of your fixed menu bar */
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+        padding-top: 0; /* Remove this padding as we're using padding-top on content-area */
     }
 }
 
@@ -110,31 +247,44 @@ img {
     }
 }
 
-.placeholder-image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: #cccccc;
+@media (max-width: 480px) {
+    .menu-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-bar .main-title {
+        margin-bottom: 10px;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-bar li {
+        margin: 5px 0;
+    }
+
+    .content-area {
+        padding-top: 100px; /* Adjust based on the height of your stacked menu bar */
+    }
 }
 
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    z-index: 1001; /* Increased to ensure it's above the menu bar */
-    height: 60px; /* Set a fixed height for the header */
-    box-sizing: border-box;
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.fixed-header h1 {
-    font-size: 24px; /* Adjust this value as needed */
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 #ascii-background {
@@ -187,56 +337,4 @@ img {
     height: 100vh;
     padding-top: 60px; /* Adjust this value based on your header's height */
     overflow: hidden; /* Prevents scrolling on the main container */
-}
-
-.menu-bar {
-    width: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: calc(100vh - 60px); /* Adjust 60px to match your header height */
-    overflow-y: auto; /* Allows scrolling within the menu if content overflows */
-    position: fixed;
-    left: 0;
-    top: 60px; /* Should match your header height */
-}
-
-.content-area {
-    width: 80%;
-    height: calc(100vh - 60px); /* Adjust 60px to match your header height */
-    overflow-y: auto; /* Allows scrolling within the content area */
-    padding: 20px;
-    box-sizing: border-box;
-    margin-left: 20%; /* Pushes content to the right of the menu bar */
-}
-
-@font-face {
-    font-family: 'IBM Plex Mono';
-    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
-         url('../fonts/IBMPlexMono-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IBM Plex Mono';
-    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
-         url('../fonts/IBMPlexMono-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-.fixed-header .main-title {
-    font-size: 26px; /* Adjust this value as needed */
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
-    .fixed-header .main-title {
-        font-size: 20px; /* Adjust this value for smaller screens */
-    }
 }
