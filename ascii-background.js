@@ -34,14 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.style.width = '100%';
         canvas.style.height = '100%';
         
-        // Adjust this line to increase resolution
-        fontSize = Math.max(6, Math.floor(canvas.width / 130)); // Increased minimum font size
+        // Keep the font size calculation as is
+        fontSize = Math.max(6, Math.floor(canvas.width / 130));
         
-        cols = Math.floor(canvas.width / fontSize);
-        rows = Math.floor(canvas.height / fontSize);
-        ctx.font = `${fontSize}px monospace`;
+        // Calculate cols and rows based on the fixed font size
+        cols = Math.ceil(canvas.width / fontSize) + 1; // Add 1 to ensure full coverage
+        rows = Math.ceil(canvas.height / fontSize);
+        
+        ctx.font = `${fontSize}px 'IBM Plex Mono', monospace`;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
+
+        console.log('Canvas size:', canvas.width, 'x', canvas.height);
+        console.log('Font size:', fontSize);
+        console.log('Grid:', cols, 'x', rows);
       }
 
       // Perlin noise function for 3D noise generation
