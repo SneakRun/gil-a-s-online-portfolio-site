@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     color: whitesmoke;
     background-color: var(--ascii-background-color);
 }
@@ -123,7 +123,18 @@ img {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
-    z-index: 1000; /* ensures it's above other elements */
+    z-index: 1001; /* Increased to ensure it's above the menu bar */
+    height: 60px; /* Set a fixed height for the header */
+    box-sizing: border-box;
+}
+
+.fixed-header h1 {
+    font-size: 24px; /* Adjust this value as needed */
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #ascii-background {
@@ -173,18 +184,59 @@ img {
 
 .main-container {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 60px; /* Adjust this value based on your header's height */
+    overflow: hidden; /* Prevents scrolling on the main container */
 }
 
 .menu-bar {
     width: 20%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Add more styles as needed */
+    height: calc(100vh - 60px); /* Adjust 60px to match your header height */
+    overflow-y: auto; /* Allows scrolling within the menu if content overflows */
+    position: fixed;
+    left: 0;
+    top: 60px; /* Should match your header height */
 }
 
 .content-area {
     width: 80%;
+    height: calc(100vh - 60px); /* Adjust 60px to match your header height */
+    overflow-y: auto; /* Allows scrolling within the content area */
     padding: 20px;
     box-sizing: border-box;
+    margin-left: 20%; /* Pushes content to the right of the menu bar */
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.fixed-header .main-title {
+    font-size: 26px; /* Adjust this value as needed */
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .fixed-header .main-title {
+        font-size: 20px; /* Adjust this value for smaller screens */
+    }
 }

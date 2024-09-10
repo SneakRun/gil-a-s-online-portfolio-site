@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.style.height = '100%';
         
         // Adjust this line to increase resolution
-        fontSize = Math.max(4, Math.floor(canvas.width / 130)); // Doubled the divisor from 80 to 160
+        fontSize = Math.max(6, Math.floor(canvas.width / 130)); // Increased minimum font size
         
         cols = Math.floor(canvas.width / fontSize);
         rows = Math.floor(canvas.height / fontSize);
