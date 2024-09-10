@@ -120,21 +120,122 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 20%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    z-index: 1001; /* Increased to ensure it's above the menu bar */
-    height: 60px; /* Set a fixed height for the header */
+    padding: 20px 0;
+    z-index: 1001;
     box-sizing: border-box;
 }
 
-.fixed-header h1 {
-    font-size: 24px; /* Adjust this value as needed */
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 80px); /* Adjust based on header height */
+    position: fixed;
+    left: 0;
+    top: 80px; /* Should match your header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-bar nav {
+    width: 100%;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-bar li {
+    margin: 15px 0;
+}
+
+.menu-bar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+    color: #ddd;
+}
+
+.content-area {
+    width: 80%;
+    margin-left: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fixed-header, .menu-bar {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-bar {
+        top: 60px;
+        position: static;
+    }
+
+    .menu-bar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 120px; /* Adjust based on header + menu height */
+    }
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
+         url('../fonts/IBMPlexMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.fixed-header .main-title {
+    font-size: 26px; /* Adjust this value as needed */
+    font-weight: bold;
     margin: 0;
     padding: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .fixed-header .main-title {
+        font-size: 20px; /* Adjust this value for smaller screens */
+    }
 }
 
 #ascii-background {
@@ -206,37 +307,4 @@ img {
     padding: 20px;
     box-sizing: border-box;
     margin-left: 20%; /* Pushes content to the right of the menu bar */
-}
-
-@font-face {
-    font-family: 'IBM Plex Mono';
-    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
-         url('../fonts/IBMPlexMono-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IBM Plex Mono';
-    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
-         url('../fonts/IBMPlexMono-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-.fixed-header .main-title {
-    font-size: 26px; /* Adjust this value as needed */
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
-    .fixed-header .main-title {
-        font-size: 20px; /* Adjust this value for smaller screens */
-    }
 }
