@@ -122,10 +122,13 @@ img {
     left: 0;
     width: 20%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 1001;
     box-sizing: border-box;
-    height: 80px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-title {
@@ -133,7 +136,238 @@ img {
     font-weight: bold;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 992px) {
+    .fixed-header {
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .menu-bar {
+        width: 100%;
+        top: auto;
+        height: auto;
+        position: static;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: auto;
+    }
+}
+}
+
+@media (max-width: 992px) {
+    .fixed-header {
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .menu-bar {
+        width: 100%;
+        top: auto;
+        height: auto;
+        position: static;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: auto;
+    }
+}
+}
+
+@media (max-width: 992px) {
+    .fixed-header {
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .menu-bar {
+        width: 100%;
+        top: auto;
+        height: auto;
+        position: static;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: auto;
+    }
+}
+}
+
+@media (max-width: 992px) {
+    .fixed-header {
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .menu-bar {
+        width: 100%;
+        top: auto;
+        height: auto;
+        position: static;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: auto;
+    }
+}
+}
+
+@media (max-width: 992px) {
+    .fixed-header {
+        width: 30%;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .menu-bar {
+        width: 30%;
+    }
+
+    .content-area {
+        width: 70%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .menu-bar {
+        width: 100%;
+        top: auto;
+        height: auto;
+        position: static;
+    }
+
+    .content-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: auto;
+    }
 }
 
 .menu-bar {
@@ -291,10 +525,12 @@ img {
     font-weight: bold;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
     max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 @media (max-width: 768px) {
