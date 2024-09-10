@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Constants for noise generation and animation
       const noiseScale = 0.05;
       const brushSize = 50;
-      const timeFactor = 0.003; // Half the original speed
+      const timeFactor = 0.001; // Half the original speed
       let zOffset = 0;
       let animationFrameId;
 
@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.height = window.innerHeight;
         canvas.style.width = '100%';
         canvas.style.height = '100%';
-        fontSize = Math.max(5, Math.floor(canvas.width / 80)); // Adjust font size based on canvas width
+        
+        // Adjust this line to increase resolution
+        fontSize = Math.max(4, Math.floor(canvas.width / 130)); // Doubled the divisor from 80 to 160
+        
         cols = Math.floor(canvas.width / fontSize);
         rows = Math.floor(canvas.height / fontSize);
         ctx.font = `${fontSize}px monospace`;
