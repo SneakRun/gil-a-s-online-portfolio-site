@@ -59,13 +59,16 @@ img {
 /* Styles for individual portfolio items */
 .portfolio-item {
     position: relative;
-    overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
-    aspect-ratio: 16 / 9;
 }
 
-/* Styles for images within portfolio items */
+.portfolio-item::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+/* Styles for images and videos within portfolio items */
 .portfolio-item img,
 .portfolio-item video {
     position: absolute;
@@ -74,6 +77,16 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.portfolio-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+  
+.portfolio-item-link:hover {
+    text-decoration: none;
 }
 
 /* Overlay styles for portfolio items */
@@ -90,10 +103,14 @@ img {
     transition: opacity 0.3s ease;
 }
 
-/* Hover effect for portfolio item images */
-.portfolio-item:hover img,
+/* Hover effect for portfolio item videos only */
 .portfolio-item:hover video {
     transform: scale(1.1);
+}
+
+/* Reset transform for images */
+.portfolio-item:hover img {
+    transform: none;
 }
 
 /* Show overlay on hover */
