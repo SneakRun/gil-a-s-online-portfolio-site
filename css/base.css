@@ -1,44 +1,31 @@
-/* Reset default styles for all elements */
+/* Reset and base styles */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'IBM Plex Mono', monospace;
-  color: whitesmoke;
-  background-color: var(--ascii-background-color);
+  font-family: var(--font-family);
+  color: var(--main-text-color);
+  background-color: transparent;
+  font-size: var(--font-size-base);
 }
 
-/* Remove default margins and padding for headings */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove default margins and padding for paragraphs */
-p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove default text decoration and inherit color for links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Remove default list styles and padding/margin for unordered lists */
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-/* Ensure images are responsive */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Font face declarations for IBM Plex Mono */
+/* Font face declarations */
 @font-face {
   font-family: 'IBM Plex Mono';
   src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
