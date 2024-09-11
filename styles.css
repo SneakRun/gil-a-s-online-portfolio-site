@@ -134,7 +134,7 @@ img {
     padding: 0 10px;
     word-break: break-word;
     hyphens: auto;
-    color: #fff;
+    color: #58493e;
     max-width: 100%;
     word-wrap: break-word;
 }
@@ -142,7 +142,7 @@ img {
 /* Styles for the menu bar */
 .menu-bar {
     width: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */ /* Remove or comment out this line */
     height: 100vh;
     position: fixed;
     left: 0;
@@ -186,7 +186,7 @@ img {
 /* Styles for links within the menu bar */
 .menu-bar a {
     font-size: 18px;
-    color: #fff;
+    color: #58493e;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -247,7 +247,7 @@ img {
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
+        /* background-color: rgba(0, 0, 0, 0.5); */ /* Remove or comment out this line */
         z-index: 1000;
     }
 
@@ -373,10 +373,15 @@ img {
 }
 
 /* Blue/grey colour scheme */
-:root {
+/* :root {
   --ascii-background-color: rgb(27, 31, 56);
   --ascii-text-color: rgb(111, 124, 145);
-}
+} */
+
+:root {
+    --ascii-background-color: rgb(250, 244, 240);
+    --ascii-text-color: rgb(163, 148, 139);
+  }
 
 /* Dark/light blue colour scheme (commented out) */
 /* :root {
@@ -384,8 +389,8 @@ img {
     --ascii-text-color: rgb(39, 54, 77);
   } */
 
-/* White/orange colour scheme (commented out) */
-/* :root {
+/* White/orange colour scheme (commented out) */ */
+ /* :root {
     --ascii-background-color: rgb(255, 252, 249);
     --ascii-text-color: rgb(255, 159, 67);
 } */
