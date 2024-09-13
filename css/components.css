@@ -182,7 +182,7 @@
   font-size: 24px;
 }
 
-/* Update existing styles */
+/* Update existing styles
 .portfolio-item-media {
   position: relative;
   width: 100%;
@@ -203,7 +203,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 /* Add new styles */
 .portfolio-item-text h3 {
