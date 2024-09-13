@@ -183,3 +183,27 @@
       padding-top: 100px; /* Adjust based on the height of your stacked menu bar */
   }
 }
+
+/* New styles for portfolio items */
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.portfolio-item-text {
+  flex: 1;
+  padding: var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-item-link {
+  flex: 2;
+}
+
+.portfolio-item-media {
+  height: 100%;
+  position: relative;
+}

@@ -40,7 +40,7 @@
   transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .overlay {
+.portfolio-item-media:hover .overlay {
   opacity: 1;
 }
 
@@ -180,4 +180,54 @@
   display: none;
   cursor: pointer;
   font-size: 24px;
+}
+
+/* Update existing styles */
+.portfolio-item-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item-media::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.portfolio-item-media img,
+.portfolio-item-media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add new styles */
+.portfolio-item-text h3 {
+  margin-bottom: var(--spacing-small);
+}
+
+.portfolio-item-text p {
+  font-size: var(--font-size-small);
+}
+
+/* Adjust overlay styles */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--overlay-color);
+  color: var(--overlay-text-color);
+  padding: var(--spacing-small);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item-media:hover .overlay {
+  opacity: 1;
 }
