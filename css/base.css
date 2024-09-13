@@ -1,0 +1,43 @@
+/* Reset and base styles */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--main-text-color);
+  background-color: transparent;
+  font-size: var(--font-size-base);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Font face declarations */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
+       url('../fonts/IBMPlexMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
+       url('../fonts/IBMPlexMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

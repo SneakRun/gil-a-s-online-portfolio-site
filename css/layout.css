@@ -1,0 +1,184 @@
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Portfolio grid layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-medium);
+  padding-top: var(--spacing-medium);
+  position: relative;
+  z-index: 1;
+}
+
+/* Content area styles */
+.content-area {
+  width: var(--content-width);
+  margin-left: var(--menu-width);
+  padding: var(--spacing-medium);
+  box-sizing: border-box;
+}
+
+/* Main container styles */
+.main-container {
+  display: flex;
+  height: 100vh;
+  padding-top: var(--spacing-large);
+  overflow: hidden;
+}
+
+/* Default styles for larger screens */
+.menu-bar {
+  width: var(--menu-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-bar .main-title {
+  margin-bottom: var(--spacing-large);
+}
+
+.menu-bar ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-area {
+  width: var(--content-width);
+  margin-left: var(--menu-width);
+  padding: var(--spacing-medium);
+}
+
+/* Media query for screens up to 1200px wide */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
+  }
+}
+
+/* Media query for screens up to 992px wide */
+@media (max-width: 992px) {
+  .main-title {
+      font-size: 20px;
+  }
+
+  .menu-bar {
+      width: 30%;
+  }
+
+  .content-area {
+      width: 70%;
+      margin-left: 30%;
+  }
+}
+
+/* Media query for screens up to 900px wide */
+@media (max-width: 900px) {
+  .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  }
+}
+
+/* Media query for screens up to 768px wide */
+@media (max-width: 768px) {
+  /* Adjust menu bar for smaller screens */
+  .menu-bar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      /* background-color: rgba(0, 0, 0, 0.5); */ /* Remove or comment out this line */
+      z-index: 1000;
+  }
+
+  .menu-bar .main-title {
+      font-size: 18px;
+      margin: 0;
+  }
+
+  .menu-bar nav {
+      width: auto;
+  }
+
+  .menu-bar ul {
+      flex-direction: row;
+  }
+
+  .menu-bar li {
+      margin: 0 10px;
+  }
+
+  /* Adjust content area for smaller screens */
+  .content-area {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 60px; /* Adjust based on the height of your fixed menu bar */
+  }
+
+  /* Adjust main container for smaller screens */
+  .main-container {
+      flex-direction: column;
+      height: auto;
+      overflow: visible;
+      padding-top: 0; /* Remove this padding as we're using padding-top on content-area */
+  }
+}
+
+/* Media query for screens up to 600px wide */
+@media (max-width: 600px) {
+  .main-container {
+      flex-direction: column;
+  }
+  .menu-bar {
+      width: 100%;
+      height: 60px; /* Adjust as needed */
+  }
+  .content-area {
+      width: 100%;
+  }
+  .portfolio-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Media query for screens up to 480px wide */
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .menu-bar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .menu-bar .main-title {
+      margin-bottom: 1px;
+  }
+
+  .menu-bar ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu-bar li {
+      margin: 5px 0;
+  }
+
+  .content-area {
+      padding-top: 100px; /* Adjust based on the height of your stacked menu bar */
+  }
+}
