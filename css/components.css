@@ -208,6 +208,7 @@
 /* Add new styles */
 .portfolio-item-text h3 {
   margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-base);
 }
 
 .portfolio-item-text p {
