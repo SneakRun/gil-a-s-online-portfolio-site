@@ -198,11 +198,11 @@
 }
 
 .portfolio-item-text {
-  flex: 0 0 20%; /* Reduced from 25% to 20% */
+  flex: 0 0 20%;
   padding: var(--spacing-small);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .portfolio-item-text h3 {
