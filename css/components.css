@@ -209,12 +209,17 @@
 
 .project-header-description {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: var(--spacing-large);
+  gap: var(--spacing-large);
 }
 
 .project-header {
-  margin-bottom: var(--spacing-medium);
+  flex: 0 0 30%; /* This sets the width to 30% of the container */
+}
+
+.project-description {
+  flex: 1; /* This allows the description to take up the remaining space */
 }
 
 #project-title {
@@ -260,6 +265,18 @@
 
   .project-description {
     flex: 1;
+  }
+}
+
+/* For mobile devices, stack the elements vertically */
+@media (max-width: 767px) {
+  .project-header-description {
+    flex-direction: column;
+  }
+
+  .project-header {
+    flex: 1 0 auto;
+    margin-bottom: var(--spacing-medium);
   }
 }
 
