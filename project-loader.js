@@ -43,6 +43,15 @@ function loadProjectContent(projectId) {
               }
           });
 
+          const tagsContainer = document.getElementById('project-tags');
+          if (data.details && data.details.technologies) {
+              data.details.technologies.forEach((tech, index) => {
+                  const span = document.createElement('span');
+                  span.textContent = tech;
+                  tagsContainer.appendChild(span);
+              });
+          }
+
           // Load additional details if needed
       })
       .catch(error => console.error('Error loading project data:', error));

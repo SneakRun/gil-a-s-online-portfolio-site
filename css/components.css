@@ -170,16 +170,16 @@
 
 /* Vimeo Wrapper Styles */
 .project-media .vimeo-wrapper {
-  position: relative; /* Establishes a positioning context */
-  padding-bottom: 56.25%; /* Creates a 16:9 aspect ratio */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
-  overflow: hidden; /* Hides overflow */
-  max-width: 100%; /* Ensures wrapper doesn't exceed container width */
-  margin-bottom: var(--spacing-medium); /* Adds space below wrapper */
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: var(--spacing-medium);
 }
 
 .project-media .vimeo-wrapper iframe {
-  position: absolute; /* Positions iframe within the wrapper */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -188,14 +188,48 @@
 
 /* Subpage Content Area Styles */
 .subpage-content-area {
-  position: relative; /* Establishes a positioning context */
-  z-index: 1001; /* Sets stacking order */
-  width: 100%; /* Makes content area full width */
-  padding: var(--spacing-medium); /* Adds padding using a custom variable */
-  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  position: relative;
+  z-index: 1001;
+  width: 100%;
+  padding: var(--spacing-medium);
+  box-sizing: border-box;
 }
 
-/* Project Description Styles */
-.project-description {
-  white-space: pre-line; /* Preserves line breaks in the text */
+/* Project Page Layout Styles */
+.project-page-layout {
+  display: flex;
+  flex-direction: column;
 }
+
+.project-page-layout .project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-medium);
+}
+
+.project-page-layout #project-title {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-small);
+}
+
+.project-page-layout #project-tags {
+  font-size: var(--font-size-small);
+  color: var(--secondary-text-color);
+}
+
+.project-page-layout #project-tags span:not(:last-child)::after {
+  content: " | ";
+  margin: 0 var(--spacing-xsmall);
+}
+
+.project-page-layout .project-description {
+  white-space: pre-line;
+  margin-top: var(--spacing-medium);
+}
+
+.project-description {
+  margin-top: var(--spacing-medium);
+}
+
+
