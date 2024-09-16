@@ -101,7 +101,7 @@
   position: fixed;
   top: var(--spacing-medium);
   left: var(--spacing-medium);
-  z-index: 1002;
+  z-index: 1004;
 }
 
 .back-button:hover {
@@ -141,4 +141,31 @@
 .project-media .vimeo-wrapper {
   width: 100%;
   margin-bottom: var(--spacing-medium);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+        rgba(250, 244, 240, 0.9) 0%,
+        rgba(250, 244, 240, 0.8) 20%,
+        rgba(250, 244, 240, 0.6) 40%,
+        rgba(250, 244, 240, 0.4) 60%,
+        rgba(250, 244, 240, 0.3) 80%,
+        rgba(250, 244, 240, 0.1) 100%);
+    z-index: 1002;
+    pointer-events: none;
+}
+
+.subpage-content-area {
+    position: relative;
+    z-index: 1003;
+}
+
+.back-button {
+    z-index: 1003;
+    position: relative;
 }
