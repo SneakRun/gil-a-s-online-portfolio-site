@@ -14,7 +14,7 @@
     }
   ],
   "details": {
-    "technologies": ["Unity", "C#", "Blender"],
+    "technologies": ["Unity", "C#", "Blender", "Kit-Bashing", "Environment Design", "Gameplay Programming"],
     "year": 2024,
     "client": "Hypha Studios"
   }
