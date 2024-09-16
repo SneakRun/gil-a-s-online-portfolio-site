@@ -192,23 +192,9 @@
 
 /* Grid Layout for Subpage Content Area */
 .subpage-content-area {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  min-height: 100vh; /* Ensures the grid takes up at least the full viewport height */
-}
-
-.project-content {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  align-self: start; /* Aligns content to the top of the grid cell */
-  justify-self: center; /* Centers content horizontally in the grid cell */
-  width: 100%; /* Ensures content takes full width of the grid cell */
-  max-width: 1200px; /* Maintains the existing max-width */
-}
-
-
-.subpage-content-area {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: var(--spacing-medium);
   box-sizing: border-box;
 }
@@ -218,10 +204,17 @@
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.project-header-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-large);
 }
 
 .project-header {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-medium);
 }
 
 #project-title {
@@ -239,13 +232,13 @@
   margin: 0 var(--spacing-xsmall);
 }
 
+.project-description {
+  margin-bottom: var(--spacing-large);
+}
+
 .project-main {
   display: flex;
   flex-direction: column;
-}
-
-.project-description {
-  margin-bottom: var(--spacing-large);
 }
 
 .project-media img,
@@ -256,25 +249,18 @@
 }
 
 @media (min-width: 768px) {
-  .project-content {
+  .project-header-description {
     flex-direction: row;
     gap: var(--spacing-large);
   }
 
   .project-header {
     flex: 0 0 30%;
-    position: static;
-    align-self: flex-start;
-    padding-top: var(--spacing-medium);
   }
 
-  .project-main {
+  .project-description {
     flex: 1;
   }
-}
-
-.project-description {
-  margin-top: var(--spacing-medium);
 }
 
 
