@@ -1,0 +1,116 @@
+/* Portfolio item styles */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item-media {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.portfolio-item-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-item-text {
+  padding: var(--spacing-small);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(5px); */
+  border-radius: 0 0 8px 8px;
+}
+
+.portfolio-item-text h3 {
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-base);
+  color: var(--main-text-color);
+}
+
+.portfolio-item-text p {
+  font-size: var(--font-size-small);
+  color: var(--main-text-color);
+}
+
+/* Main title styles */
+.main-title {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  text-align: center;
+  padding: 0 var(--spacing-small);
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Menu bar styles */
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.menu-bar nav {
+  width: 100%;
+}
+
+.menu-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-bar li {
+  margin: var(--spacing-small) 0;
+}
+
+.menu-bar a {
+  font-size: var(--font-size-base);
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+  color: var(--menu-hover-color);
+}
+
+/* ASCII background styles */
+#ascii-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#ascii-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--ascii-background-opacity);
+}

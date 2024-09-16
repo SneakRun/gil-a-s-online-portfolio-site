@@ -22,9 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let fontSize, cols, rows;
       
       // Constants for noise generation and animation
-      const noiseScale = 0.05;
-      const brushSize = 50;
-      const timeFactor = 0.003; // Half the original speed
+      const noiseScale = 0.06; //reduced from 0.05
+      const timeFactor = 0.0012; // original speed 0.001
       let zOffset = 0;
       let animationFrameId;
 
@@ -34,12 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.height = window.innerHeight;
         canvas.style.width = '100%';
         canvas.style.height = '100%';
-        fontSize = Math.max(5, Math.floor(canvas.width / 80)); // Adjust font size based on canvas width
-        cols = Math.floor(canvas.width / fontSize);
-        rows = Math.floor(canvas.height / fontSize);
-        ctx.font = `${fontSize}px monospace`;
+        
+        // Keep the font size calculation as is
+        fontSize = Math.max(6, Math.floor(canvas.width / 130));
+        
+        // Calculate cols and rows based on the fixed font size
+        cols = Math.ceil(canvas.width / fontSize) + 1; // Add 1 to ensure full coverage
+        rows = Math.ceil(canvas.height / fontSize);
+        
+        ctx.font = `${fontSize}px 'IBM Plex Mono', monospace`;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
+
+        console.log('Canvas size:', canvas.width, 'x', canvas.height);
+        console.log('Font size:', fontSize);
+        console.log('Grid:', cols, 'x', rows);
       }
 
       // Perlin noise function for 3D noise generation
@@ -90,23 +98,14 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillStyle = getComputedColor('--ascii-background-color');
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Get mouse position (default to 0 if not set)
-        const mouseX = window.mouseX || 0;
-        const mouseY = window.mouseY || 0;
-
         ctx.fillStyle = getComputedColor('--ascii-text-color');
         for (let y = 0; y < rows; y++) {
             for (let x = 0; x < cols; x++) {
-                // Calculate distance from current position to mouse
-                const distance = Math.hypot(mouseX - (x * fontSize + fontSize / 2), mouseY - (y * fontSize + fontSize / 2));
-                const effectIntensity = Math.max(0, Math.min(1, 1 - distance / brushSize));
-
-                // Generate noise value and adjust based on mouse proximity
-                const noiseBase = noise(x * noiseScale, y * noiseScale, zOffset);
-                const adjustedNoiseValue = noiseBase + (0.5 * effectIntensity * noise(x * noiseScale + effectIntensity, y * noiseScale + effectIntensity, zOffset));
+                // Generate noise value
+                const noiseValue = noise(x * noiseScale, y * noiseScale, zOffset);
 
                 // Select ASCII character based on noise value
-                const index = Math.floor((adjustedNoiseValue * 0.5 + 0.5) * (asciiChars.length - 1));
+                const index = Math.floor((noiseValue * 0.5 + 0.5) * (asciiChars.length - 1));
                 const char = asciiChars[index];
 
                 // Draw the character
@@ -119,19 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
         animationFrameId = requestAnimationFrame(draw);
       }
 
-      // Function to handle mouse movement
-      function handleMouseMove(event) {
-          const rect = canvas.getBoundingClientRect();
-          window.mouseX = event.clientX - rect.left;
-          window.mouseY = event.clientY - rect.top;
-      }
-
       // Initialization function
       function init() {
         console.log("Initializing ASCII background");
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
-        canvas.addEventListener('mousemove', handleMouseMove);
         draw();
         console.log("ASCII background initialized");
       }
@@ -148,20 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Resizing canvas");
         originalResizeCanvas();
         console.log("Canvas resized. New dimensions:", canvas.width, "x", canvas.height);
-      };
-
-      // Log when draw function is called
-      // const originalDraw = draw;
-      // draw = function() {
-      //   // Remove or comment out the console.log here
-      //   originalDraw();
-      // };
-
-      // Log when mouse movement is detected
-      const originalHandleMouseMove = handleMouseMove;
-      handleMouseMove = function(event) {
-        console.log("Mouse moved:", event.clientX, event.clientY);
-        originalHandleMouseMove(event);
       };
 
       // Start the animation
