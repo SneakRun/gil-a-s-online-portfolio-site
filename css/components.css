@@ -1,191 +1,201 @@
-/* Portfolio item styles */
+/* Portfolio Item Styles */
 .portfolio-item {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Clips content that exceeds the container */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .portfolio-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
+/* Portfolio Item Media */
 .portfolio-item-media {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative; /* Establishes a positioning context for absolute children */
+  padding-top: 56.25%; /* Creates a 16:9 aspect ratio */
 }
 
 .portfolio-item-media img,
 .portfolio-item-media video {
-  position: absolute;
+  position: absolute; /* Positions media within the container */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures media covers the entire container */
 }
 
+/* Portfolio Item Text */
 .portfolio-item-text {
-  padding: var(--spacing-small);
-  background-color: rgba(255, 255, 255, 0.5);
-  /* backdrop-filter: blur(5px); */
-  border-radius: 0 0 8px 8px;
+  padding: var(--spacing-small); /* Adds padding using a custom variable */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  /* backdrop-filter: blur(5px); */ /* Blur effect */
+  border-radius: 0 0 8px 8px; /* Rounds bottom corners */
 }
 
 .portfolio-item-text h3 {
-  margin-bottom: var(--spacing-small);
-  font-size: var(--font-size-base);
-  color: var(--main-text-color);
+  margin-bottom: var(--spacing-small); /* Adds space below the heading */
+  font-size: var(--font-size-base); /* Sets font size using a custom variable */
+  color: var(--main-text-color); /* Sets text color using a custom variable */
 }
 
 .portfolio-item-text p {
-  font-size: var(--font-size-small);
-  color: var(--main-text-color);
+  font-size: var(--font-size-small); /* Sets smaller font size for paragraph */
+  color: var(--main-text-color); /* Sets text color using a custom variable */
 }
 
-/* Main title styles */
+/* Main Title Styles */
 .main-title {
-  font-size: var(--font-size-large);
-  font-weight: bold;
-  text-align: center;
-  padding: 0 var(--spacing-small);
-  word-break: break-word;
-  hyphens: auto;
+  font-size: var(--font-size-large); /* Sets large font size */
+  font-weight: bold; /* Makes text bold */
+  text-align: center; /* Centers the text */
+  padding: 0 var(--spacing-small); /* Adds horizontal padding */
+  word-break: break-word; /* Allows words to break and wrap */
+  hyphens: auto; /* Enables automatic hyphenation */
 }
 
-/* Menu bar styles */
+/* Menu Bar Styles */
 .menu-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  z-index: 1000;
-  background-color: transparent;
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: center; /* Centers items horizontally */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  z-index: 1000; /* Sets stacking order */
+  background-color: transparent; /* Makes background transparent */
 }
 
 .menu-bar nav {
-  width: 100%;
+  width: 100%; /* Makes navigation full width */
 }
 
 .menu-bar ul {
-  list-style-type: none;
+  list-style-type: none; /* Removes default list styling */
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks list items vertically */
+  align-items: center; /* Centers items horizontally */
 }
 
 .menu-bar li {
-  margin: var(--spacing-small) 0;
+  margin: var(--spacing-small) 0; /* Adds vertical spacing between list items */
 }
 
 .menu-bar a {
-  font-size: var(--font-size-base);
-  color: var(--main-text-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: var(--font-size-base); /* Sets font size using a custom variable */
+  color: var(--main-text-color); /* Sets text color using a custom variable */
+  text-decoration: none; /* Removes underline from links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .menu-bar a:hover {
-  color: var(--menu-hover-color);
+  color: var(--menu-hover-color); /* Changes color on hover */
 }
 
-/* ASCII background styles */
+/* ASCII Background Styles */
 #ascii-background {
-  position: fixed;
+  position: fixed; /* Fixes position relative to the viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
+  z-index: -1; /* Places behind other content */
+  overflow: hidden; /* Hides overflow */
+  pointer-events: none; /* Prevents interaction with the background */
 }
 
 #ascii-canvas {
-  position: fixed;
+  position: fixed; /* Fixes position relative to the viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  opacity: var(--ascii-background-opacity);
+  z-index: -1; /* Places behind other content */
+  pointer-events: none; /* Prevents interaction with the canvas */
+  opacity: var(--ascii-background-opacity); /* Sets opacity using a custom variable */
 }
 
-/* Project page styles */
+/* Project Page Styles */
 .project-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--spacing-medium);
+  max-width: 800px; /* Limits maximum width */
+  margin: 0 auto; /* Centers the content */
+  padding: var(--spacing-medium); /* Adds padding using a custom variable */
 }
 
 .project-media {
-  margin-top: var(--spacing-medium);
+  margin-top: var(--spacing-medium); /* Adds space above media */
 }
 
 .project-media img,
 .project-media video {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: var(--spacing-medium);
+  max-width: 100%; /* Ensures media doesn't exceed container width */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: var(--spacing-medium); /* Adds space below media */
 }
 
 .project-media iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: var(--spacing-medium);
+  width: 100%; /* Makes iframe full width */
+  aspect-ratio: 16 / 9; /* Sets 16:9 aspect ratio */
+  margin-bottom: var(--spacing-medium); /* Adds space below iframe */
 }
 
 .project-details {
-  margin-top: var(--spacing-large);
+  margin-top: var(--spacing-large); /* Adds large space above details */
 }
 
+/* Back Button Styles */
 .back-button {
-  display: inline-block;
-  margin-bottom: var(--spacing-medium);
-  color: var(--main-text-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  position: relative;
-  z-index: 1002;
+  display: inline-block; /* Allows setting dimensions */
+  margin-bottom: var(--spacing-medium); /* Adds space below button */
+  color: var(--main-text-color); /* Sets text color using a custom variable */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  position: relative; /* Establishes a positioning context */
+  z-index: 1002; /* Sets stacking order */
 }
 
 .back-button:hover {
-  color: var(--menu-hover-color);
+  color: var(--menu-hover-color); /* Changes color on hover */
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .project-content {
-    padding: var(--spacing-small);
+    padding: var(--spacing-small); /* Reduces padding on smaller screens */
   }
 }
 
+/* Vimeo Wrapper Styles */
 .project-media .vimeo-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative; /* Establishes a positioning context */
+  padding-bottom: 56.25%; /* Creates a 16:9 aspect ratio */
   height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin-bottom: var(--spacing-medium);
+  overflow: hidden; /* Hides overflow */
+  max-width: 100%; /* Ensures wrapper doesn't exceed container width */
+  margin-bottom: var(--spacing-medium); /* Adds space below wrapper */
 }
 
 .project-media .vimeo-wrapper iframe {
-  position: absolute;
+  position: absolute; /* Positions iframe within the wrapper */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
+/* Subpage Content Area Styles */
 .subpage-content-area {
-  position: relative;
-  z-index: 1001;
-  width: 100%;
-  padding: var(--spacing-medium);
-  box-sizing: border-box;
+  position: relative; /* Establishes a positioning context */
+  z-index: 1001; /* Sets stacking order */
+  width: 100%; /* Makes content area full width */
+  padding: var(--spacing-medium); /* Adds padding using a custom variable */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+/* Project Description Styles */
+.project-description {
+  white-space: pre-line; /* Preserves line breaks in the text */
 }

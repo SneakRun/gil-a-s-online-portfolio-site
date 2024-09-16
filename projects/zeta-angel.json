@@ -1,6 +1,6 @@
 {
   "title": "Zeta_Angel",
-  "description": "Unity-Based Interactive Game Environment, made for Hypha Studios' 'HARD WIRED' Exhibition, London, 2024",
+  "description": "Zeta_Angel (2024) is an interactive game environment that questions how we perceive and interact with objects in real spaces against virtual ones.\n\nBuilt from found digital objects and ripped game assets, the virtual environment is a composite of discarded digital artefacts, exploring the differences between human and virtual.\n\nMade in Unity and Blender using kit-bashing techniques, the process aims to challenge and reimagine current digital creation to be more open and accessible. language frameworks",
   "media": [
     {
       "type": "vimeo",
@@ -14,7 +14,7 @@
     }
   ],
   "details": {
-    "technologies": ["Unity", "C#"],
+    "technologies": ["Unity", "C#", "Blender"],
     "year": 2024,
     "client": "Hypha Studios"
   }

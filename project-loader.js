@@ -14,7 +14,7 @@ function loadProjectContent(projectId) {
       .then(data => {
           document.title = `${data.title} - Gil Altarace Sherman`;
           document.getElementById('project-title').textContent = data.title;
-          document.getElementById('project-description').textContent = data.description;
+          document.getElementById('project-description').innerHTML = data.description.replace(/\n/g, '<br>');
 
           const mediaContainer = document.querySelector('.project-media');
           data.media.forEach(item => {

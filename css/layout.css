@@ -1,126 +1,126 @@
 /* Container styles */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 100%; /* Full width of its parent */
+  max-width: 1200px; /* Maximum width of 1200px */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 15px; /* Adds horizontal padding */
 }
 
 /* Portfolio grid layout */
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-medium);
-  padding-top: var(--spacing-medium);
+  display: grid; /* Uses CSS Grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  gap: var(--spacing-medium); /* Adds gap between grid items */
+  padding-top: var(--spacing-medium); /* Adds top padding */
 }
 
 @media (max-width: 1400px) {
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
   }
 }
 
 /* Content area styles */
 .content-area {
-  width: calc(100% - var(--menu-width));
-  margin-left: var(--menu-width);
-  padding: var(--spacing-medium);
-  box-sizing: border-box;
+  width: calc(100% - var(--menu-width)); /* Full width minus menu width */
+  margin-left: var(--menu-width); /* Pushes content to the right of the menu */
+  padding: var(--spacing-medium); /* Adds padding around content */
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 /* Subpage content area styles */
 .subpage-content-area {
-  width: 100%;
-  margin-left: 0;
-  padding: var(--spacing-medium);
-  box-sizing: border-box;
+  width: 100%; /* Full width */
+  margin-left: 0; /* No left margin */
+  padding: var(--spacing-medium); /* Adds padding around content */
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 /* Main container styles */
 .main-container {
-  display: flex;
-  min-height: 100vh;
+  display: flex; /* Uses flexbox for layout */
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
 }
 
 /* Menu bar styles */
 .menu-bar {
-  width: var(--menu-width);
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding-top: var(--spacing-large);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: var(--menu-width); /* Width set by custom property */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Fixed position on the screen */
+  left: 0; /* Aligned to the left edge */
+  top: 0; /* Aligned to the top edge */
+  padding-top: var(--spacing-large); /* Adds top padding */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally */
 }
 
 .menu-bar .main-title {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-large); /* Adds bottom margin to title */
 }
 
 .menu-bar ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks list items vertically */
+  align-items: center; /* Centers list items horizontally */
 }
 
 .menu-bar li {
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium); /* Adds bottom margin to list items */
 }
 
 /* Media queries */
 @media (max-width: 768px) {
   .menu-bar {
-    width: 100%;
-    height: auto;
-    position: static;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--spacing-small);
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Height adjusts to content */
+    position: static; /* Normal document flow */
+    flex-direction: row; /* Aligns children horizontally */
+    justify-content: space-between; /* Spreads out children */
+    padding: var(--spacing-small); /* Reduces padding */
   }
 
   .menu-bar .main-title {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Removes bottom margin from title */
   }
 
   .menu-bar ul {
-    flex-direction: row;
+    flex-direction: row; /* Aligns list items horizontally */
   }
 
   .menu-bar li {
-    margin: 0 var(--spacing-small);
+    margin: 0 var(--spacing-small); /* Adds horizontal margin to list items */
   }
 
   .content-area {
-    width: 100%;
-    margin-left: 0;
-    padding-top: calc(var(--spacing-large) * 2);
+    width: 100%; /* Full width */
+    margin-left: 0; /* No left margin */
+    padding-top: calc(var(--spacing-large) * 2); /* Increases top padding */
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts grid for smaller screens */
   }
 
   .subpage-content-area {
-    padding: var(--spacing-small);
+    padding: var(--spacing-small); /* Reduces padding */
   }
 }
 
 @media (max-width: 480px) {
   .menu-bar {
-    flex-direction: column;
+    flex-direction: column; /* Stacks children vertically on very small screens */
   }
 
   .menu-bar ul {
-    margin-top: var(--spacing-small);
+    margin-top: var(--spacing-small); /* Adds top margin to menu list */
   }
 
   .content-area {
-    padding-top: calc(var(--spacing-large) * 3);
+    padding-top: calc(var(--spacing-large) * 3); /* Further increases top padding */
   }
 
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout for very small screens */
   }
 }
