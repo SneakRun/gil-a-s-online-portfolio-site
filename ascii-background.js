@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let fontSize, cols, rows;
       
       // Constants for noise generation and animation
-      const noiseScale = 0.05;
-      const timeFactor = 0.001; // Half the original speed
+      const noiseScale = 0.06; //reduced from 0.05
+      const timeFactor = 0.0012; // original speed 0.001
       let zOffset = 0;
       let animationFrameId;
 
