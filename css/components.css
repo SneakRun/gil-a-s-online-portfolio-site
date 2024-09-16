@@ -189,6 +189,25 @@
 }
 
 /* Subpage Content Area Styles */
+
+/* Grid Layout for Subpage Content Area */
+.subpage-content-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh; /* Ensures the grid takes up at least the full viewport height */
+}
+
+.project-content {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  align-self: start; /* Aligns content to the top of the grid cell */
+  justify-self: center; /* Centers content horizontally in the grid cell */
+  width: 100%; /* Ensures content takes full width of the grid cell */
+  max-width: 1200px; /* Maintains the existing max-width */
+}
+
+
 .subpage-content-area {
   padding: var(--spacing-medium);
   box-sizing: border-box;
@@ -244,9 +263,9 @@
 
   .project-header {
     flex: 0 0 30%;
-    position: sticky;
-    top: var(--spacing-large);
+    position: static;
     align-self: flex-start;
+    padding-top: var(--spacing-medium);
   }
 
   .project-main {
