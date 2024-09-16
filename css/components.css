@@ -1,149 +1,94 @@
 /* Portfolio Item Styles */
 .portfolio-item {
-  display: flex; /* Uses flexbox for layout */
-  flex-direction: column; /* Stacks child elements vertically */
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Clips content that exceeds the container */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover {
-  transform: translateY(-5px); /* Slight upward movement on hover */
-}
-
-/* Portfolio Item Media */
-.portfolio-item-media {
-  position: relative; /* Establishes a positioning context for absolute children */
-  padding-top: 56.25%; /* Creates a 16:9 aspect ratio */
-}
-
-.portfolio-item-media img,
-.portfolio-item-media video {
-  position: absolute; /* Positions media within the container */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures media covers the entire container */
+  transform: translateY(-5px);
 }
 
 /* Portfolio Item Text */
 .portfolio-item-text {
-  padding: var(--spacing-small); /* Adds padding using a custom variable */
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-  /* backdrop-filter: blur(5px); */ /* Blur effect */
-  border-radius: 0 0 8px 8px; /* Rounds bottom corners */
+  padding: var(--spacing-small);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(5px); */
+  border-radius: 0 0 8px 8px;
 }
 
 .portfolio-item-text h3 {
-  margin-bottom: var(--spacing-small); /* Adds space below the heading */
-  font-size: var(--font-size-base); /* Sets font size using a custom variable */
-  color: var(--main-text-color); /* Sets text color using a custom variable */
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-base);
+  color: var(--main-text-color);
 }
 
 .portfolio-item-text p {
-  font-size: var(--font-size-small); /* Sets smaller font size for paragraph */
-  color: var(--main-text-color); /* Sets text color using a custom variable */
+  font-size: var(--font-size-small);
+  color: var(--main-text-color);
 }
 
 /* Main Title Styles */
 .main-title {
-  font-size: var(--font-size-large); /* Sets large font size */
-  font-weight: bold; /* Makes text bold */
-  text-align: center; /* Centers the text */
-  padding: 0 var(--spacing-small); /* Adds horizontal padding */
-  word-break: break-word; /* Allows words to break and wrap */
-  hyphens: auto; /* Enables automatic hyphenation */
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  text-align: center;
+  padding: 0 var(--spacing-small);
+  word-break: break-word;
+  hyphens: auto;
 }
 
 /* Menu Bar Styles */
 .menu-bar {
-  display: flex; /* Uses flexbox for layout */
-  flex-direction: column; /* Stacks child elements vertically */
-  align-items: center; /* Centers items horizontally */
-  box-sizing: border-box; /* Includes padding and border in element's total width and height */
-  z-index: 1000; /* Sets stacking order */
-  background-color: transparent; /* Makes background transparent */
-}
-
-.menu-bar nav {
-  width: 100%; /* Makes navigation full width */
+  background-color: transparent;
 }
 
 .menu-bar ul {
-  list-style-type: none; /* Removes default list styling */
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Uses flexbox for layout */
-  flex-direction: column; /* Stacks list items vertically */
-  align-items: center; /* Centers items horizontally */
 }
 
 .menu-bar li {
-  margin: var(--spacing-small) 0; /* Adds vertical spacing between list items */
+  margin: var(--spacing-small) 0;
 }
 
 .menu-bar a {
-  font-size: var(--font-size-base); /* Sets font size using a custom variable */
-  color: var(--main-text-color); /* Sets text color using a custom variable */
-  text-decoration: none; /* Removes underline from links */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  font-size: var(--font-size-base);
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .menu-bar a:hover {
-  color: var(--menu-hover-color); /* Changes color on hover */
+  color: var(--menu-hover-color);
 }
 
 /* ASCII Background Styles */
-#ascii-background {
-  position: fixed; /* Fixes position relative to the viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Places behind other content */
-  overflow: hidden; /* Hides overflow */
-  pointer-events: none; /* Prevents interaction with the background */
-}
-
 #ascii-canvas {
-  position: fixed; /* Fixes position relative to the viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Places behind other content */
-  pointer-events: none; /* Prevents interaction with the canvas */
-  opacity: var(--ascii-background-opacity); /* Sets opacity using a custom variable */
+  opacity: var(--ascii-background-opacity);
 }
 
 /* Project Page Styles */
-.project-content {
-  max-width: 800px; /* Limits maximum width */
-  margin: 0 auto; /* Centers the content */
-  padding: var(--spacing-medium); /* Adds padding using a custom variable */
-}
-
 .project-media {
-  margin-top: var(--spacing-medium); /* Adds space above media */
+  margin-top: var(--spacing-medium);
 }
 
 .project-media img,
 .project-media video {
-  max-width: 100%; /* Ensures media doesn't exceed container width */
-  height: auto; /* Maintains aspect ratio */
-  margin-bottom: var(--spacing-medium); /* Adds space below media */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--spacing-medium);
 }
 
 .project-media iframe {
-  width: 100%; /* Makes iframe full width */
-  aspect-ratio: 16 / 9; /* Sets 16:9 aspect ratio */
-  margin-bottom: var(--spacing-medium); /* Adds space below iframe */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: var(--spacing-medium);
 }
 
 .project-details {
-  margin-top: var(--spacing-large); /* Adds large space above details */
+  margin-top: var(--spacing-large);
 }
 
 /* Back Button Styles */
@@ -160,66 +105,16 @@
 }
 
 .back-button:hover {
-  color: var(--menu-hover-color); /* Changes color on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .project-content {
-    padding: var(--spacing-small); /* Reduces padding on smaller screens */
-  }
+  color: var(--menu-hover-color);
 }
 
 /* Vimeo Wrapper Styles */
 .project-media .vimeo-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
   margin-bottom: var(--spacing-medium);
-}
-
-.project-media .vimeo-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Subpage Content Area Styles */
-
-/* Grid Layout for Subpage Content Area */
-.subpage-content-area {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: var(--spacing-medium);
-  box-sizing: border-box;
-}
-
-.project-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.project-header-description {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: var(--spacing-large);
-  gap: var(--spacing-large);
-}
-
-.project-header {
-  flex: 0 0 30%; /* This sets the width to 30% of the container */
-}
-
-.project-description {
-  flex: 1; /* This allows the description to take up the remaining space */
 }
 
 #project-title {
@@ -241,43 +136,9 @@
   margin-bottom: var(--spacing-large);
 }
 
-.project-main {
-  display: flex;
-  flex-direction: column;
-}
-
 .project-media img,
 .project-media video,
 .project-media .vimeo-wrapper {
   width: 100%;
   margin-bottom: var(--spacing-medium);
 }
-
-@media (min-width: 768px) {
-  .project-header-description {
-    flex-direction: row;
-    gap: var(--spacing-large);
-  }
-
-  .project-header {
-    flex: 0 0 30%;
-  }
-
-  .project-description {
-    flex: 1;
-  }
-}
-
-/* For mobile devices, stack the elements vertically */
-@media (max-width: 767px) {
-  .project-header-description {
-    flex-direction: column;
-  }
-
-  .project-header {
-    flex: 1 0 auto;
-    margin-bottom: var(--spacing-medium);
-  }
-}
-
-

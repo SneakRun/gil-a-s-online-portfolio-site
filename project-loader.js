@@ -17,11 +17,15 @@ function loadProjectContent(projectId) {
           document.getElementById('project-description').innerHTML = data.description.replace(/\n/g, '<br>');
 
           const mediaContainer = document.querySelector('.project-media');
+          console.log('Media container:', mediaContainer);
           data.media.forEach(item => {
+              console.log('Processing media item:', item);
               if (item.type === 'image') {
+                  console.log('Creating image element for:', item.src);
                   const img = document.createElement('img');
                   img.src = item.src;
                   img.alt = item.alt;
+                  console.log('Image element created:', img);
                   mediaContainer.appendChild(img);
               } else if (item.type === 'video') {
                   const video = document.createElement('video');

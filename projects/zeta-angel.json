@@ -8,9 +8,29 @@
       "alt": "Zeta_Angel"
     },
     {
-      "type": "vimeo",
-      "src": "https://vimeo.com/922920674",
-      "alt": "Zeta_Angel_Redux"
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-1.webp",
+      "alt": "Zeta Angel Image 1"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-2.webp",
+      "alt": "Zeta Angel Image 2"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-3.webp",
+      "alt": "Zeta Angel Image 3"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-4.webp",
+      "alt": "Zeta Angel Image 4"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-5.webp",
+      "alt": "Zeta Angel Image 5"
     }
   ],
   "details": {
