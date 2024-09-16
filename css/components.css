@@ -28,15 +28,20 @@
 
 .portfolio-item-text {
   padding: var(--spacing-small);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(5px); */
+  border-radius: 0 0 8px 8px;
 }
 
 .portfolio-item-text h3 {
   margin-bottom: var(--spacing-small);
   font-size: var(--font-size-base);
+  color: var(--main-text-color);
 }
 
 .portfolio-item-text p {
   font-size: var(--font-size-small);
+  color: var(--main-text-color);
 }
 
 /* Main title styles */
