@@ -28,6 +28,18 @@ function loadProjectContent(projectId) {
                   video.src = item.src;
                   video.controls = true;
                   mediaContainer.appendChild(video);
+              } else if (item.type === 'vimeo') {
+                  const wrapper = document.createElement('div');
+                  wrapper.className = 'vimeo-wrapper';
+                  
+                  const iframe = document.createElement('iframe');
+                  iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}`;
+                  iframe.frameBorder = '0';
+                  iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                  iframe.allowFullscreen = true;
+                  
+                  wrapper.appendChild(iframe);
+                  mediaContainer.appendChild(wrapper);
               }
           });
 

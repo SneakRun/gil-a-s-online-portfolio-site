@@ -28,6 +28,14 @@
   box-sizing: border-box;
 }
 
+/* Subpage content area styles */
+.subpage-content-area {
+  width: 100%;
+  margin-left: 0;
+  padding: var(--spacing-medium);
+  box-sizing: border-box;
+}
+
 /* Main container styles */
 .main-container {
   display: flex;
@@ -92,6 +100,10 @@
 
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .subpage-content-area {
+    padding: var(--spacing-small);
   }
 }
 
