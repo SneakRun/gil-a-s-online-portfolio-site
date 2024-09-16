@@ -188,44 +188,68 @@
 
 /* Subpage Content Area Styles */
 .subpage-content-area {
-  position: relative;
-  z-index: 1001;
-  width: 100%;
   padding: var(--spacing-medium);
   box-sizing: border-box;
 }
 
-/* Project Page Layout Styles */
-.project-page-layout {
+.project-content {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project-page-layout .project-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: var(--spacing-medium);
+.project-header {
+  margin-bottom: var(--spacing-large);
 }
 
-.project-page-layout #project-title {
-  font-size: var(--font-size-xlarge);
+#project-title {
+  font-size: var(--font-size-xxlarge);
   margin-bottom: var(--spacing-small);
 }
 
-.project-page-layout #project-tags {
-  font-size: var(--font-size-small);
+#project-tags {
+  font-size: var(--font-size-base);
   color: var(--secondary-text-color);
 }
 
-.project-page-layout #project-tags span:not(:last-child)::after {
+#project-tags span:not(:last-child)::after {
   content: " | ";
   margin: 0 var(--spacing-xsmall);
 }
 
-.project-page-layout .project-description {
-  white-space: pre-line;
-  margin-top: var(--spacing-medium);
+.project-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  margin-bottom: var(--spacing-large);
+}
+
+.project-media img,
+.project-media video,
+.project-media .vimeo-wrapper {
+  width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .project-content {
+    flex-direction: row;
+    gap: var(--spacing-large);
+  }
+
+  .project-header {
+    flex: 0 0 30%;
+    position: sticky;
+    top: var(--spacing-large);
+    align-self: flex-start;
+  }
+
+  .project-main {
+    flex: 1;
+  }
 }
 
 .project-description {
