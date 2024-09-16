@@ -1,0 +1,20 @@
+{
+  "title": "Zeta_Angel",
+  "description": "Unity-Based Interactive Game Environment, made for Hypha Studios' 'HARD WIRED' Exhibition, London, 2024",
+  "media": [
+    {
+      "type": "image",
+      "src": "images/zeta-angel-1.jpg",
+      "alt": "Zeta Angel Screenshot 1"
+    },
+    {
+      "type": "video",
+      "src": "videos/zeta-angel-gameplay.mp4"
+    }
+  ],
+  "details": {
+    "technologies": ["Unity", "C#"],
+    "year": 2024,
+    "client": "Hypha Studios"
+  }
+}
