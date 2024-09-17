@@ -1,18 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
+    <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gil Altarace Sherman - Portfolio</title>
+    
+    <!-- Stylesheet links -->
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/transitions.css">
   </head>
   <body>
+    <!-- Background elements -->
     <div class="main-page-backdrop"></div>
     <canvas id="ascii-canvas"></canvas>
+    
+    <!-- Header and navigation -->
     <header class="header">
       <h1 class="main-title">Gil Altarace Sherman</h1>
       <nav>
@@ -23,13 +31,16 @@
         </ul>
       </nav>
     </header>
-    <div class="content-area">
-      <div class="portfolio-grid">
+    
+    <!-- Main content area -->
+    <div id="content-area" class="content-area">
+      <!-- Work section -->
+      <div id="work-section" class="portfolio-grid">
         <!-- 1 Zeta Angel Project -->
         <div class="portfolio-item">
           <a href="project-template.html?id=zeta-angel" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/zeta-angel-cover.webp" alt="Zeta Angel Project">
+              <img src="videos/zeta-angel-cover.webp" alt="Zeta Angel Project" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Zeta_Angel</h3>
@@ -42,7 +53,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=john-hardy" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/john-hardy.webp" alt="John Hardy Project">
+              <img src="videos/john-hardy.webp" alt="John Hardy Project" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>R/GA Contract: John Hardy 'Moment Maker'</h3>
@@ -55,7 +66,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=neo-starcadia" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/neo-starcadia.webp" alt="Neo-Starcadia Project">
+              <img src="videos/neo-starcadia.webp" alt="Neo-Starcadia Project" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Neo-Starcadia</h3>
@@ -68,7 +79,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=super-wave" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/super-wave.webp" alt="SuperWave">
+              <img src="videos/super-wave.webp" alt="SuperWave" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Super-Wave</h3>
@@ -81,7 +92,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=gasoline-valley" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/gasoline-valley.webp" alt="Project 5">
+              <img src="videos/gasoline-valley.webp" alt="Project 5" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>'It Took Three Weeks To Scroll Through The Gasoline Valley'</h3>
@@ -94,7 +105,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=dream-eater" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/dream-eater.webp" alt="Project 6">
+              <img src="videos/dream-eater.webp" alt="Project 6" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Dream Eater</h3>
@@ -107,7 +118,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=cubitts" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="images/cubitts.webp" alt="Project 7">
+              <img src="images/cubitts.webp" alt="Project 7" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Sunglasses Design Commission for Cubitts</h3>
@@ -120,7 +131,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=plant-growth-visualiser" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="images/plant-growth-vis.webp" alt="Project 8">
+              <img src="images/plant-growth-vis.webp" alt="Project 8" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Plant Growth Visualiser</h3>
@@ -133,7 +144,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=remesh" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/remesh.webp" alt="Project 9">
+              <img src="videos/remesh.webp" alt="Project 9" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Remesh</h3>
@@ -146,7 +157,7 @@
         <div class="portfolio-item">
           <a href="project-template.html?id=online-portfolio" class="portfolio-item-link">
             <div class="portfolio-item-media">
-              <img src="videos/project10.webp" alt="Project 10">
+              <img src="videos/project10.webp" alt="Project 10" loading="lazy">
             </div>
             <div class="portfolio-item-text">
               <h3>Online Portfolio Website</h3>
@@ -156,8 +167,22 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-    <script src="ascii-background.js" onerror="console.error('Failed to load ascii-background.js')"></script>
-    <script src="header-scroll.js"></script>
+    
+    <!-- About section -->
+    <div id="about-section" class="about-content" style="display: none;">
+      <div class="about-text">
+        <p>Your about text goes here. This will be styled with a large font size.</p>
+      </div>
+      <div class="about-details">
+        <p>Additional details or a brief bio can go here.</p>
+      </div>
+    </div>
+    
+    <!-- JavaScript files -->
+    <script src="javascript/script.js"></script>
+    <script src="javascript/ascii-background.js" onerror="console.error('Failed to load ascii-background.js')"></script>
+    <script src="javascript/header-scroll.js"></script>
+    <script src="javascript/navigation.js"></script>
+    <script src="javascript/page-transitions.js"></script>
   </body>
 </html>
