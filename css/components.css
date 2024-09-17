@@ -1,35 +1,43 @@
-/* Portfolio item styles */
+/* Portfolio Item Styles */
+
+.main-page-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(to bottom, 
+      rgba(250, 244, 240, 0.7) 0%,
+      rgba(250, 244, 240, 0.5) 30%,
+      rgba(250, 244, 240, 0.3) 60%,
+      rgba(250, 244, 240, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main-page-backdrop {
+    z-index: 2; /* Above ASCII canvas but below other content */
+  }
+}
+
 .portfolio-item {
-  display: flex;
-  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 5px;
   transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 .portfolio-item:hover {
   transform: translateY(-5px);
 }
 
-.portfolio-item-media {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.portfolio-item-media img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Portfolio Item Text */
 .portfolio-item-text {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: var(--spacing-small);
-  background-color: rgba(255, 255, 255, 0.5);
-  /* backdrop-filter: blur(5px); */
   border-radius: 0 0 8px 8px;
 }
 
@@ -44,7 +52,7 @@
   color: var(--main-text-color);
 }
 
-/* Main title styles */
+/* Main Title Styles */
 .main-title {
   font-size: var(--font-size-large);
   font-weight: bold;
@@ -54,27 +62,15 @@
   hyphens: auto;
 }
 
-/* Menu bar styles */
+/* Menu Bar Styles */
 .menu-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  z-index: 1000;
   background-color: transparent;
-}
-
-.menu-bar nav {
-  width: 100%;
 }
 
 .menu-bar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .menu-bar li {
@@ -92,25 +88,103 @@
   color: var(--menu-hover-color);
 }
 
-/* ASCII background styles */
-#ascii-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
+/* ASCII Background Styles */
 #ascii-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
   opacity: var(--ascii-background-opacity);
 }
+
+/* Project Page Styles */
+.project-media {
+  margin-top: var(--spacing-medium);
+}
+
+.project-media img,
+.project-media video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--spacing-medium);
+}
+
+.project-media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: var(--spacing-medium);
+}
+
+.project-details {
+  margin-top: var(--spacing-large);
+}
+
+
+/* Vimeo Wrapper Styles */
+.project-media .vimeo-wrapper {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
+
+#project-title {
+  font-size: var(--font-size-xxlarge);
+  margin-bottom: var(--spacing-small);
+}
+
+#project-tags {
+  font-size: var(--font-size-base);
+  color: var(--secondary-text-color);
+}
+
+#project-tags span:not(:last-child)::after {
+  content: " | ";
+  margin: 0 var(--spacing-xsmall);
+}
+
+.project-description {
+  margin-bottom: var(--spacing-large);
+}
+
+.project-media img,
+.project-media video,
+.project-media .vimeo-wrapper {
+  width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+        rgba(250, 244, 240, 0.9) 0%,
+        rgba(250, 244, 240, 0.8) 20%,
+        rgba(250, 244, 240, 0.6) 40%,
+        rgba(250, 244, 240, 0.4) 60%,
+        rgba(250, 244, 240, 0.3) 80%,
+        rgba(250, 244, 240, 0.1) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.subpage-content-area {
+    position: relative;
+    z-index: 1003;
+}
+
+.back-button {
+    z-index: 1006;
+    position: relative;
+}
+
+.overlay {
+  z-index: 1;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+

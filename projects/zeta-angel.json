@@ -1,0 +1,41 @@
+{
+  "title": "Zeta_Angel",
+  "description": "Zeta_Angel (2024) is an interactive game environment that questions how we perceive and interact with objects in real spaces against virtual ones.\n\nBuilt from found digital objects and ripped game assets, the virtual environment is a composite of discarded digital artefacts, exploring the differences between human and virtual language frameworks.\n\nMade in Unity and Blender using kit-bashing techniques, the process aims to challenge and reimagine current digital creation to be more open and accessible.",
+  "media": [
+    {
+      "type": "vimeo",
+      "src": "https://vimeo.com/916447649",
+      "alt": "Zeta_Angel"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-1.webp",
+      "alt": "Zeta Angel Image 1"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-2.webp",
+      "alt": "Zeta Angel Image 2"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-3.webp",
+      "alt": "Zeta Angel Image 3"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-4.webp",
+      "alt": "Zeta Angel Image 4"
+    },
+    {
+      "type": "image",
+      "src": "/images/zeta-angel/zeta-angel-5.webp",
+      "alt": "Zeta Angel Image 5"
+    }
+  ],
+  "details": {
+    "technologies": ["Unity", "C#", "Blender", "Kit-Bashing", "Environment Design", "Gameplay Programming"],
+    "year": 2024,
+    "client": "Hypha Studios"
+  }
+}

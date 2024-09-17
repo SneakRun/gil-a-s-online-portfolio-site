@@ -248,7 +248,7 @@ img {
         align-items: center;
         padding: 10px;
         /* background-color: rgba(0, 0, 0, 0.5); */ /* Remove or comment out this line */
-        z-index: 1000;
+        z-index: 1003;
     }
 
     .menu-bar .main-title {
