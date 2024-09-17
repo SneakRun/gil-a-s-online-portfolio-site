@@ -45,9 +45,25 @@
   box-sizing: border-box;
 }
 
+#header-ascii-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 .header.scrolled {
   background-color: rgba(250, 244, 240, 0.886); 
   backdrop-filter: blur(5px);
+}
+
+.header.scrolled #header-ascii-canvas {
+  opacity: 0.1;
 }
 
 .header .main-title {
@@ -195,6 +211,7 @@
   pointer-events: none;
 }
 
+/* Project page ASCII canvas */
 #ascii-canvas {
   position: fixed;
   top: 0;
@@ -203,6 +220,19 @@
   height: 100%;
   z-index: 1;
   pointer-events: none;
+}
+
+/* header ASCII canvas */
+#header-ascii-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Project Page Styles */

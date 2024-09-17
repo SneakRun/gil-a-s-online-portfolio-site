@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
+    const headerAsciiCanvas = document.getElementById('header-ascii-canvas');
     const contentArea = document.querySelector('.content-area') || document.querySelector('.subpage-content-area');
 
     function checkScroll() {
@@ -9,8 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (scrollPosition > contentTop - headerHeight) {
             header.classList.add('scrolled');
+            if (headerAsciiCanvas) {
+                headerAsciiCanvas.style.opacity = '1';
+            }
         } else {
             header.classList.remove('scrolled');
+            if (headerAsciiCanvas) {
+                headerAsciiCanvas.style.opacity = '0';
+            }
         }
     }
 
