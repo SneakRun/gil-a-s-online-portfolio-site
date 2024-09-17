@@ -115,22 +115,6 @@
   margin-top: var(--spacing-large);
 }
 
-/* Back Button Styles */
-.back-button {
-  display: inline-block;
-  margin-bottom: var(--spacing-medium);
-  color: var(--main-text-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  position: fixed;
-  top: var(--spacing-medium);
-  left: var(--spacing-medium);
-  z-index: 1004;
-}
-
-.back-button:hover {
-  color: var(--menu-hover-color);
-}
 
 /* Vimeo Wrapper Styles */
 .project-media .vimeo-wrapper {

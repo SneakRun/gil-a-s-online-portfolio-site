@@ -125,6 +125,22 @@
 
 /* Subpage Styles */
 
+/* Subpage header styles */
+.subpage-content-area {
+  margin-top: 80px; /* Adjust based on your header height */
+}
+
+.header .back-button {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+}
+
+.header .back-button:hover {
+  color: var(--menu-hover-color);
+}
+
 /* Portfolio Item Styles */
 .portfolio-item {
   display: flex;
@@ -257,5 +273,41 @@
   .project-header {
     flex: 1 0 auto;
     margin-bottom: var(--spacing-medium);
+  }
+}
+
+/* Subpage header styles */
+.subpage-header {
+  justify-content: flex-start;
+  padding: var(--spacing-small);
+}
+
+.subpage-header .back-button {
+  font-size: var(--font-size-base);
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: var(--spacing-small);
+  left: var(--spacing-small);
+}
+
+.subpage-header .back-button:hover {
+  color: var(--menu-hover-color);
+}
+
+/* Adjust subpage content area top margin */
+.subpage-content-area {
+  margin-top: 80px; /* Adjust based on your header height */
+}
+
+/* Media query for subpage header on smaller screens */
+@media (max-width: 768px) {
+  .subpage-header {
+    padding: var(--spacing-small);
+  }
+
+  .subpage-content-area {
+    margin-top: 60px; /* Adjust based on your header height for mobile */
   }
 }
