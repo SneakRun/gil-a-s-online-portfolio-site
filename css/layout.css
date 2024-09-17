@@ -55,6 +55,7 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    mix-blend-mode: multiply;
 }
 
 .header.scrolled {
@@ -63,7 +64,7 @@
 }
 
 .header.scrolled #header-ascii-canvas {
-  opacity: 0.1;
+  opacity: var(--ascii-background-opacity);
 }
 
 .header .main-title {
@@ -233,6 +234,7 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    mix-blend-mode: multiply;
 }
 
 /* Project Page Styles */

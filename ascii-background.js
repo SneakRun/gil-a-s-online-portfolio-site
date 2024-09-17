@@ -160,8 +160,8 @@ function initHeaderAscii() {
         const header = document.querySelector('.header');
         headerCanvas.width = header.offsetWidth;
         headerCanvas.height = header.offsetHeight;
-        headerFontSize = Math.max(4, Math.floor(headerCanvas.width / 200));
-        headerCols = Math.ceil(headerCanvas.width / headerFontSize);
+        headerFontSize = Math.max(6, Math.floor(headerCanvas.width / 130));
+        headerCols = Math.ceil(headerCanvas.width / headerFontSize) + 1;
         headerRows = Math.ceil(headerCanvas.height / headerFontSize);
         headerCtx.font = `${headerFontSize}px 'IBM Plex Mono', monospace`;
         headerCtx.textAlign = 'left';
@@ -176,7 +176,7 @@ function initHeaderAscii() {
             for (let j = 0; j < headerRows; j++) {
                 const x = i * headerFontSize;
                 const y = j * headerFontSize;
-                const noiseValue = noise(x * 0.1, y * 0.1, zOffset * 0.1);
+                const noiseValue = noise(x * noiseScale, y * noiseScale, zOffset);
                 const charIndex = Math.floor(map(noiseValue, -1, 1, 0, asciiChars.length - 1));
                 headerCtx.fillText(asciiChars[charIndex], x, y);
             }
