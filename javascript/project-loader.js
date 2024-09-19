@@ -37,7 +37,19 @@ function loadProjectContent(projectId) {
                   wrapper.className = 'vimeo-wrapper';
                   
                   const iframe = document.createElement('iframe');
-                  iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}`;
+                  iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}?loop=1&autoplay=1`;
+                  iframe.frameBorder = '0';
+                  iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                  iframe.allowFullscreen = true;
+                  
+                  wrapper.appendChild(iframe);
+                  mediaContainer.appendChild(wrapper);
+              } else if (item.type === 'youtube') {
+                  const wrapper = document.createElement('div');
+                  wrapper.className = 'youtube-wrapper';
+                  
+                  const iframe = document.createElement('iframe');
+                  iframe.src = `https://www.youtube.com/embed/${item.src}`;
                   iframe.frameBorder = '0';
                   iframe.allow = 'autoplay; fullscreen; picture-in-picture';
                   iframe.allowFullscreen = true;
