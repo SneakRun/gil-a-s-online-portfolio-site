@@ -21,6 +21,7 @@
   }
 }
 
+/* Portfolio Item Styles */
 .portfolio-item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -84,6 +85,7 @@
   margin-top: var(--spacing-medium);
 }
 
+/* Project Media Styles */
 .project-media img,
 .project-media video {
   max-width: 100%;
@@ -97,6 +99,7 @@
   margin-bottom: var(--spacing-medium);
 }
 
+/* Project Details Styles */
 .project-details {
   margin-top: var(--spacing-large);
 }
@@ -110,7 +113,23 @@
   max-width: 100%;
   margin-bottom: var(--spacing-medium);
 }
+/* Youtube Wrapper Styles */
+.project-media .youtube-wrapper {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
 
+.project-media .youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Project Title Styles */
 #project-title {
   font-size: var(--font-size-xxlarge);
   margin-bottom: var(--spacing-small);
@@ -130,6 +149,7 @@
   margin-bottom: var(--spacing-large);
 }
 
+/* Project Media Styles */
 .project-media img,
 .project-media video,
 .project-media .vimeo-wrapper {
@@ -137,6 +157,7 @@
   margin-bottom: var(--spacing-medium);
 }
 
+/* Backdrop Styles */
 .backdrop {
     position: fixed;
     top: 0;
@@ -154,22 +175,26 @@
     pointer-events: none;
 }
 
+/* Subpage Content Area Styles */
 .subpage-content-area {
     position: relative;
     z-index: 1003;
 }
 
+/* Back Button Styles */
 .back-button {
     z-index: 1006;
     position: relative;
 }
 
+/* Overlay Styles */
 .overlay {
   z-index: 1;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Overlay Hover Styles */
 .portfolio-item:hover .overlay {
   background-color: rgba(0, 0, 0, 0.7);
 }
