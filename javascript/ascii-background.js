@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Constants for noise generation and animation
       const noiseScale = 0.06; //reduced from 0.05
-      const timeFactor = 0.0015; // original speed 0.001, then 0.0012, then 0.0015
+      const timeFactor = 0.003; // original speed 0.001, then 0.0012, then 0.0015
       let zOffset = 0;
       let animationFrameId;
 

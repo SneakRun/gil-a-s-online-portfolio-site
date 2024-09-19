@@ -1,0 +1,36 @@
+{
+  "title": "R/GA: John Hardy 'Moment Maker'",
+  "description": "The John Hardy 'Moment Maker' project is a web-based procedural flower interface designed for enhancing the user-end shopping experience. Developed in 2024 as part of a contract with R/GA, this interactive tool allows users to create unique floral arrangements that correspond to John Hardy jewelry pieces, providing a personalized and engaging way to explore the brand's collection.",
+  "media": [
+    {
+      "type": "video",
+      "src": "/videos/john-hardy-moment-maker.mp4",
+      "alt": "John Hardy Moment Maker Interface Demo"
+    },
+    {
+      "type": "image",
+      "src": "/images/john-hardy/interface-overview.webp",
+      "alt": "Overview of the Moment Maker Interface"
+    },
+    {
+      "type": "image",
+      "src": "/images/john-hardy/flower-generation.webp",
+      "alt": "Procedural Flower Generation Process"
+    },
+    {
+      "type": "image",
+      "src": "/images/john-hardy/user-interaction.webp",
+      "alt": "User Interacting with the Moment Maker"
+    },
+    {
+      "type": "image",
+      "src": "/images/john-hardy/final-arrangement.webp",
+      "alt": "Example of a Final Floral Arrangement"
+    }
+  ],
+  "details": {
+    "technologies": ["JavaScript", "WebGL", "Three.js", "Procedural Generation", "UI/UX Design", "E-commerce Integration"],
+    "year": 2024,
+    "client": "R/GA for John Hardy"
+  }
+}
