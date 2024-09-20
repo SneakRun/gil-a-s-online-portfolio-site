@@ -1,10 +1,7 @@
-console.log('ASCII background script file loaded');
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("DOM fully loaded and parsed");
   try {
+    // Start of IIFE (Immediately Invoked Function Expression)
     (function() {
-      console.log("ASCII background script is running");
-
       // ASCII characters used for rendering, from darkest to lightest
       const asciiChars = "@$B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
       
@@ -14,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Canvas element 'ascii-canvas' not found");
         return;
       }
-      console.log("Canvas found:", canvas);
       const ctx = canvas.getContext('2d');
-      console.log("Canvas context:", ctx);
       
       // Variables for font size, columns, and rows
       let fontSize, cols, rows;
@@ -44,10 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.font = `${fontSize}px 'IBM Plex Mono', monospace`;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
-
-        console.log('Canvas size:', canvas.width, 'x', canvas.height);
-        console.log('Font size:', fontSize);
-        console.log('Grid:', cols, 'x', rows);
       }
 
       // Perlin noise function for 3D noise generation
@@ -115,40 +106,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Increment z-offset for animation
         zOffset += timeFactor;
-        animationFrameId = requestAnimationFrame(draw);
+        animationFrameId = requestIdleCallback(draw);
       }
 
       // Initialization function
       function init() {
-        console.log("Initializing ASCII background");
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         draw();
-        console.log("ASCII background initialized");
 
         // Add this line to clean up when the window is closed or navigated away from
         window.addEventListener('beforeunload', cleanup);
       }
 
-      // Add console logs to confirm if the code is running
-      console.log("ASCII background script started");
+      // Function to debounce resize event
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
 
-      // Log when the canvas is found
-      console.log("Canvas element:", canvas);
-
-      // Log when resizeCanvas is called
-      const originalResizeCanvas = resizeCanvas;
-      resizeCanvas = function() {
-        console.log("Resizing canvas");
-        originalResizeCanvas();
-        console.log("Canvas resized. New dimensions:", canvas.width, "x", canvas.height);
-      };
+      const debouncedResizeCanvas = debounce(resizeCanvas, 250);
+      window.addEventListener('resize', debouncedResizeCanvas);
 
       // Start the animation
       init();
-
-      console.log("ASCII background script setup complete");
-    })();
+    })(); // End of IIFE
   } catch (error) {
     console.error("Error in ASCII background script:", error);
   }
@@ -161,22 +150,6 @@ function getComputedColor(varName) {
 // Add this function at the end of the file
 function cleanup() {
   if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId);
+    cancelIdleCallback(animationFrameId);
   }
 }
-
-// Function to debounce resize event
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const debouncedResizeCanvas = debounce(resizeCanvas, 250);
-window.addEventListener('resize', debouncedResizeCanvas);
