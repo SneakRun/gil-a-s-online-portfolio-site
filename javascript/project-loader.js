@@ -37,7 +37,7 @@ function loadProjectContent(projectId) {
                   wrapper.className = 'vimeo-wrapper';
                   
                   const iframe = document.createElement('iframe');
-                  iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}?loop=1&autoplay=1`;
+                  iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}?loop=1&autoplay=1&muted=1`;
                   iframe.frameBorder = '0';
                   iframe.allow = 'autoplay; fullscreen; picture-in-picture';
                   iframe.allowFullscreen = true;

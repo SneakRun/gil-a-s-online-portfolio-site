@@ -1,0 +1,47 @@
+{
+  "title": "Neo-Starcadia",
+  "description": "Neo-Starcadia is a Unity-powered visual exploration project that brings the illustration practices of Gil Altarace-Sherman and Lenka Della-Porta into an interactive 3D virtual world. Created for the Creative Computing Institute Graduate Show, Neo-Starcadia is a collaborative and experimental work that explores the convergence of traditional drawing and 3D modeling in an immersive, interactive platform.",
+  "media": [
+    {
+      "type": "vimeo",
+      "src": "https://vimeo.com/891501190?share=copy#t=0"
+    },
+    {
+      "type": "image",
+      "src": "/images/neo-starcadia/neo-starcadia-1.webp",
+      "alt": "Neo-Starcadia image 1"
+    },
+    {
+      "type": "image",
+      "src": "/images/neo-starcadia/neo-starcadia-2.webp",
+      "alt": "Neo-Starcadia image 2"
+    },
+    {
+      "type": "image",
+      "src": "/images/neo-starcadia/neo-starcadia-3.webp",
+      "alt": "Neo-Starcadia image 3"
+    },
+    {
+      "type": "image",
+      "src": "/images/neo-starcadia/neo-starcadia-4.webp",
+      "alt": "Neo-Starcadia image 4"
+    },
+    {
+      "type": "image",
+      "src": "/images/neo-starcadia/neo-starcadia-5.webp",
+      "alt": "Neo-Starcadia image 5"
+    }
+  ],
+  "details": {
+    "year": 2022,
+    "client": "Creative Computing Institute Graduate Show",
+    "role": "Designer and Developer",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Digital Illustration",
+      "3D Modeling",
+      "Interactive Design"
+    ]
+  }
+}

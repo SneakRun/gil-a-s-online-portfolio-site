@@ -199,3 +199,18 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Project Description Link Styles */
+.project-description a {
+    text-decoration: underline;
+    color: var(--text-color, #333);
+    background-color: transparent;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-description a:hover {
+    color: var(--accent-color, #FF6B6B);
+    text-decoration: none;
+}
+
