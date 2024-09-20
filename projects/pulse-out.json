@@ -8,14 +8,19 @@
       "alt": "Pulse-Out! Gameplay Demo"
     },
     {
-      "type": "image",
-      "src": "/images/pulse-out/fullconvo.webp",
-      "alt": "Pulse-Out! Full Conversation with ChatGPT"
-    },
-    {
-      "type": "image",
-      "src": "/images/pulse-out/fullcode.webp",
-      "alt": "Pulse-Out! Full Code Review"
+      "type": "sideBySide",
+      "images": [
+        {
+          "type": "image",
+          "src": "/images/pulse-out/fullconvo.webp",
+          "alt": "Pulse-Out! Full Conversation with ChatGPT"
+        },
+        {
+          "type": "image",
+          "src": "/images/pulse-out/fullcode.webp",
+          "alt": "Pulse-Out! Full Code Review"
+        }
+      ]
     }
   ],
   "details": {

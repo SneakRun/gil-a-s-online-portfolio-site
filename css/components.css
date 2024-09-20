@@ -214,3 +214,25 @@
     text-decoration: none;
 }
 
+/* Side-by-side image container */
+.side-by-side-container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.side-by-side-container img {
+    width: calc(50% - var(--spacing-small));
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .side-by-side-container {
+        flex-direction: column;
+    }
+    .side-by-side-container img {
+        width: 100%;
+    }
+}
+

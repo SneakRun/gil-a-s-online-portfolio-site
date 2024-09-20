@@ -57,6 +57,16 @@ function loadProjectContent(projectId) {
                       
                       wrapper.appendChild(iframe);
                       mediaContainer.appendChild(wrapper);
+                  } else if (item.type === 'sideBySide') {
+                      const sideBySideContainer = document.createElement('div');
+                      sideBySideContainer.className = 'side-by-side-container';
+                      item.images.forEach(image => {
+                          const img = document.createElement('img');
+                          img.src = image.src;
+                          img.alt = image.alt;
+                          sideBySideContainer.appendChild(img);
+                      });
+                      mediaContainer.appendChild(sideBySideContainer);
                   }
               });
           } else {
