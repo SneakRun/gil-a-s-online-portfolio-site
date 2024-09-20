@@ -47,7 +47,7 @@ function loadProjectContent(projectId) {
                       mediaContainer.appendChild(wrapper);
                   } else if (item.type === 'youtube') {
                       const wrapper = document.createElement('div');
-                      wrapper.className = 'youtube-wrapper';
+                      wrapper.className = 'youtube-wrapper video-wrapper';
                       
                       const iframe = document.createElement('iframe');
                       iframe.src = `https://www.youtube.com/embed/${item.src}`;
