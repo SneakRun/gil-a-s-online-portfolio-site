@@ -7,26 +7,6 @@
       "src": "https://vimeo.com/1011094813",
       "alt": "John Hardy Project Demo",
       "isThumbnail": true
-    },
-    {
-      "type": "image",
-      "src": "/images/john-hardy/interface-overview.webp",
-      "alt": "Overview of the Moment Maker Interface"
-    },
-    {
-      "type": "image",
-      "src": "/images/john-hardy/flower-generation.webp",
-      "alt": "Procedural Flower Generation Process"
-    },
-    {
-      "type": "image",
-      "src": "/images/john-hardy/user-interaction.webp",
-      "alt": "User Interacting with the Moment Maker"
-    },
-    {
-      "type": "image",
-      "src": "/images/john-hardy/final-arrangement.webp",
-      "alt": "Example of a Final Floral Arrangement"
     }
   ],
   "details": {

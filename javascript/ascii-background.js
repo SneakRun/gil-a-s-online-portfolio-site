@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', resizeCanvas);
         draw();
         console.log("ASCII background initialized");
+
+        // Add this line to clean up when the window is closed or navigated away from
+        window.addEventListener('beforeunload', cleanup);
       }
 
       // Add console logs to confirm if the code is running
@@ -154,3 +157,26 @@ document.addEventListener('DOMContentLoaded', function() {
 function getComputedColor(varName) {
   return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
 }
+
+// Add this function at the end of the file
+function cleanup() {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+}
+
+// Function to debounce resize event
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const debouncedResizeCanvas = debounce(resizeCanvas, 250);
+window.addEventListener('resize', debouncedResizeCanvas);
