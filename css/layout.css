@@ -207,9 +207,13 @@
 
 /* Project Page Styles */
 .project-content {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: var(--spacing-medium);
+  padding: 0 var(--spacing-medium);
+  box-sizing: border-box;
 }
 
 /* Subpage Content Area Styles */
@@ -219,14 +223,6 @@
   min-height: 100vh;
   padding: var(--spacing-medium);
   box-sizing: border-box;
-}
-
-.project-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
 }
 
 .project-header-description {
@@ -273,6 +269,42 @@
   .project-header {
     flex: 1 0 auto;
     margin-bottom: var(--spacing-medium);
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-content {
+    padding: 0 var(--spacing-medium);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-header-description {
+    flex-direction: column;
+  }
+
+  .project-header, .project-description {
+    width: 100%;
+  }
+
+  .subpage-content-area {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-media img,
+  .project-media video,
+  .project-media iframe,
+  .side-by-side-container img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .side-by-side-container {
+    flex-direction: column;
   }
 }
 

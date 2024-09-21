@@ -89,7 +89,9 @@
 .project-media img,
 .project-media video {
   max-width: 100%;
+  width: 100%;
   height: auto;
+  display: block;
   margin-bottom: var(--spacing-medium);
 }
 
@@ -106,20 +108,23 @@
 
 
 /* Vimeo Wrapper Styles */
-.project-media .vimeo-wrapper {
-  padding-bottom: 56.25%;
+.project-media .vimeo-wrapper,
+.project-media .youtube-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
   margin-bottom: var(--spacing-medium);
 }
-/* Youtube Wrapper Styles */
-.project-media .youtube-wrapper {
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin-bottom: var(--spacing-medium);
+
+.project-media .vimeo-wrapper iframe,
+.project-media .youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .project-media .youtube-wrapper iframe {
@@ -129,6 +134,7 @@
   width: 100%;
   height: 100%;
 }
+
 /* Project Title Styles */
 #project-title {
   font-size: var(--font-size-xxlarge);
@@ -152,8 +158,11 @@
 /* Project Media Styles */
 .project-media img,
 .project-media video,
-.project-media .vimeo-wrapper {
+.project-media iframe {
+  max-width: 100%;
   width: 100%;
+  height: auto;
+  display: block;
   margin-bottom: var(--spacing-medium);
 }
 
@@ -220,11 +229,13 @@
     justify-content: space-between;
     gap: var(--spacing-medium);
     margin-bottom: var(--spacing-medium);
+    flex-wrap: wrap;
 }
 
 .side-by-side-container img {
     width: calc(50% - var(--spacing-small));
     object-fit: cover;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -233,15 +244,17 @@
     }
     .side-by-side-container img {
         width: 100%;
+        margin-bottom: var(--spacing-small);
     }
 }
 
 .video-wrapper {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  margin-bottom: var(--spacing-medium);
 }
 
 .video-wrapper iframe {
