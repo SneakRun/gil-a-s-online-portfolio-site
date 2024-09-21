@@ -1,0 +1,37 @@
+{
+  "title": "Gasoline Valley",
+  "description": "It Took Three Weeks to Scroll Through the Gasoline Valley was a collaborative virtual group project aimed at challenging the traditional hierarchies and exclusivity often found in exhibition spaces through the medium of virtual world-building.\n\nIn collaboration with six other talented artists, I took on the responsibility for the Blender elements and overall curation. By digitally transforming the artworks of the group into a cohesive and interconnected collection, the project emphasized a deliberate absence of favoritism.\n\nThrough the unification of these pieces in the virtual realm, the collective sought to communicate their shared goal of deconstructing hierarchical exhibition structures.\n\nArtists: Gil Altarace Sherman, Dora Perini, Vincenzo Ottino, Zachary Berry, Maria Gambara, Lottie Stephens",
+  "media": [
+    {
+      "type": "youtube",
+      "src": "ShPFuZAPO4Q",
+      "alt": "Gasoline Valley Full Video",
+      "isThumbnail": true
+    },
+    {
+      "type": "image",
+      "src": "images/gasoline-valley/gasoline-valley-1.webp",
+      "alt": "Screenshot of Gasoline Valley interface"
+    },
+    {
+      "type": "image",
+      "src": "images/gasoline-valley/gasoline-valley-2.webp",
+      "alt": "Screenshot of Gasoline Valley interface"
+    },
+    {
+      "type": "image",
+      "src": "images/gasoline-valley/gasoline-valley-3.webp",
+      "alt": "Screenshot of Gasoline Valley interface"
+    },
+    {
+      "type": "image",
+      "src": "images/gasoline-valley/gasoline-valley-4.webp",
+      "alt": "Screenshot of Gasoline Valley interface"
+    }
+  ],
+  "details": {
+    "technologies": ["World Building", "3D", "Blender", "Curation", "Procedural Generation", "Data Visualization"],
+    "year": 2023,
+    "client": "Self-initiated"
+  }
+}

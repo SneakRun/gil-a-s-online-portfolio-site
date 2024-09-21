@@ -1,0 +1,35 @@
+{
+  "title": "Cubitts: Product Design for 'Artist of Hampstead' Collection",
+  "description": "Commissioned by Cubitts for their Hampstead Collection, the sunglasses were inspired by the local architecture of the Isokon firm and its constructivist roots.\n\nThe project combined Design Thinking principles with a human-centered approach, with a focus on empathy and understanding of user needs at every stage, from prototyping through to production.\n\nCollaboration across different teams played a crucial role in refining the design's adaptability and problem-solving, ensuring the product not only met market expectations but also overcame unforeseen challenges.",
+  "media": [
+    {
+      "type": "image",
+      "src": "images/cubitts/cubitts-1.webp",
+      "alt": "Cubitts project image 1",
+      "isThumbnail": true
+    },
+    {
+      "type": "image",
+      "src": "images/cubitts/cubitts-2.webp",
+      "alt": "Cubitts project image 2"
+    },
+    {
+      "type": "sideBySide",
+      "images": [
+        {
+          "src": "images/cubitts/cubitts-3.webp",
+          "alt": "Cubitts project image 3"
+        },
+        {
+          "src": "images/cubitts/cubitts-4.webp",
+          "alt": "Cubitts project image 4"
+        }
+      ]
+    }
+  ],
+  "details": {
+    "technologies": ["Product Design", "User Research", "User Empathy", "Prototyping", "Design Thinking"],
+    "year": 2023,
+    "client": "Cubitts"
+  }
+}

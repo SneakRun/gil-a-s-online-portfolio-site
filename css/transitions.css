@@ -1,0 +1,13 @@
+/* transitions.css */
+
+/* Fade out effect: reduces opacity to 0 over 0.3 seconds */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.09s ease-out;
+}
+
+/* Fade in effect: increases opacity to 1 over 0.3 seconds */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.09s ease-in;
+}

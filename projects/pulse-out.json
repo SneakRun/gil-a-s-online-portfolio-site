@@ -1,0 +1,39 @@
+{
+  "title": "Pulse-Out!",
+  "description": "This project utilizes the p5.js library and ChatGPT to explore the potential of coding in collaboration with large language models (LLMs). It investigates how generative AI can be integrated into various creative workflows, fostering a collaborative dynamic with tools like ChatGPT.\n\nThe goal was to develop a simple, arcade-style game that runs in a web browser.\n\nPushing the boundaries of what could be achieved in a short timeframe, the process offered valuable insights into the delicate balance between clear intention, coding expertise, and effective prompt engineering.\n\n<a href='https://editor.p5js.org/SneakRun/sketches/c7TnV0pr7' target=\"_blank\" rel=\"noopener noreferrer\">View Project Code and Play 'Pulse-Out!'</a>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/videos/pulse-out.webp",
+      "alt": "Pulse-Out! Gameplay Demo"
+    },
+    {
+      "type": "sideBySide",
+      "images": [
+        {
+          "type": "image",
+          "src": "/images/pulse-out/fullconvo.webp",
+          "alt": "Pulse-Out! Full Conversation with ChatGPT"
+        },
+        {
+          "type": "image",
+          "src": "/images/pulse-out/fullcode.webp",
+          "alt": "Pulse-Out! Full Code Review"
+        }
+      ]
+    }
+  ],
+  "details": {
+    "year": 2024,
+    "client": "Personal Project",
+    "role": "Game Designer and Developer",
+    "technologies": [
+      "p5.js",
+      "JavaScript",
+      "HTML5 Canvas",
+      "AI Integration",
+      "Prompt Engineering",
+      "Responsive Design"
+    ]
+  }
+}

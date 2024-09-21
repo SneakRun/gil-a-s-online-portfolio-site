@@ -1,0 +1,46 @@
+{
+  "title": "Plant Growth Visualiser",
+  "description": "Plant Growth Visualiser (2022) is a prototype developed using p5.js, C++, and Arduino to create dynamic floral patterns that evolve in real-time in response to the growth of houseplants. This project explores the intersections of mindfulness practices, technology, and home environments for people with anxiety disorders.\n\nAn ultrasonic distance sensor measures the plant's size, and the data is processed through a custom procedural algorithm. The algorithm generates soothing visuals with random colors and sizes, carefully designed through research to facilitate meditative experiences.",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-1.webp",
+      "alt": "Plant Growth Visualiser Interface"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-2.webp",
+      "alt": "Arduino Setup for Plant Growth Visualiser"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-3.webp",
+      "alt": "Plant Growth Data Visualization"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-4.webp",
+      "alt": "Plant Growth Visualiser Interface"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-5.webp",
+      "alt": "Plant Growth Visualiser Interface"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-6.webp",
+      "alt": "Plant Growth Visualiser Interface"
+    },
+    {
+      "type": "image",
+      "src": "/images/pgv/pgv-7.webp",
+      "alt": "Plant Growth Visualiser Interface"
+    }
+  ],
+  "details": {
+    "technologies": ["Arduino", "p5.js", "Data Visualization", "Human-Centered Design", "Procedural Generation", "Physical Computing"],
+    "year": 2022,
+    "client": "Human-Centred Digital Design Course Project"
+  }
+}
