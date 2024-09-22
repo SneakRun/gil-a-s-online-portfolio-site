@@ -357,37 +357,49 @@
 /* About Page Styles */
 .about-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px); /* Subtract header height */
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1003;
+  margin-top: 60px; /* Add top margin equal to header height */
+}
+
+.about-wrapper {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: var(--spacing-large);
-  font-size: var(--font-size-base);
-  text-align: center;
+  padding: var(--spacing-small);
+  background-color: rgba(255, 255, 255, 0.682);
+  border-radius: 3px;
+}
+
+.about-text {
+  font-size: calc(var(--font-size-base) * 1.3);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: var(--spacing-large);
   position: relative;
   z-index: 1003;
 }
 
-.about-text {
-  font-size: calc(var(--font-size-large) * 1.2);
-  line-height: 1.2;
-  text-align: center;
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1004;
+.about-text p {
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
 }
 
 .about-details {
-  margin-top: var(--spacing-large);
   font-size: var(--font-size-base);
   text-align: center;
-  position: relative;
-  z-index: 1004;
 }
 
 @media (max-width: 768px) {
   .about-text {
-    font-size: calc(var(--font-size-base) * 1.2);
+    font-size: var(--font-size-base);
   }
 }
 
