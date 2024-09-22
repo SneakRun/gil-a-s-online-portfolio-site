@@ -1,24 +1,6 @@
 // Portfolio grid
 const portfolioItems = [
   {
-    id: 'zeta-angel',
-    title: 'Zeta_Angel',
-    description: 'Unity-Based Interactive Game Environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
-    image: 'videos/zeta-angel-cover.webp'
-  },
-  {
-    id: 'neo-starcadia',
-    title: 'Neo-Starcadia',
-    description: 'Unity-Based Interactive Illustration Experience, made for Creative Computing Institute Grad Show, 2022',
-    image: 'videos/neo-starcadia.webp'
-  },
-  {
-    id: 'dream-eater',
-    title: 'Dream Eater',
-    description: 'Unity-Based Interactive Game Environment, made for Central Saint Martins Degree Show, 2023',
-    image: 'videos/dream-eater.webp'
-  },
-  {
     id: 'john-hardy',
     title: 'R/GA Contract: John Hardy \'Moment Maker\'',
     description: 'Web-Based Procedural Flower Interface for User-End Shopping Experience, 2024',
@@ -35,6 +17,24 @@ const portfolioItems = [
     title: 'It Took Three Weeks To Scroll Through The Gasoline Valley',
     description: 'Digital World Made for Central Saint Martins Virtual Group Show, made in Blender, 2022',
     image: 'videos/gasoline-valley.webp'
+  },
+  {
+    id: 'zeta-angel',
+    title: 'Zeta_Angel',
+    description: 'Unity-Based Interactive Game Environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
+    image: 'videos/zeta-angel-cover.webp'
+  },
+  {
+    id: 'neo-starcadia',
+    title: 'Neo-Starcadia',
+    description: 'Unity-Based Interactive Illustration Experience, made for Creative Computing Institute Grad Show, 2022',
+    image: 'videos/neo-starcadia.webp'
+  },
+  {
+    id: 'dream-eater',
+    title: 'Dream Eater',
+    description: 'Unity-Based Interactive Game Environment, made for Central Saint Martins Degree Show, 2023',
+    image: 'videos/dream-eater.webp'
   },
   {
     id: 'online-portfolio',
