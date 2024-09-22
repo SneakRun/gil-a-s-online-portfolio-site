@@ -440,3 +440,45 @@
     margin-top: 60px; /* Adjust based on your header height for mobile */
   }
 }
+
+/* Contact Page Styles */
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px); /* Subtract header height */
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1003;
+  margin-top: 60px; /* Add top margin equal to header height */
+}
+
+.contact-wrapper {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing-large);
+  background-color: rgba(255, 255, 255, 0.682);
+  border-radius: 3px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1004; /* Higher than the contact-content */
+}
+
+.contact-info {
+  font-size: calc(var(--font-size-base) * 1.3);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: var(--spacing-large);
+  position: relative;
+  z-index: 1005; /* Higher than the contact-wrapper */
+  width: 100%;
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}
