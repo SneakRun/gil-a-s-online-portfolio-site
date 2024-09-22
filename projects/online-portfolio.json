@@ -1,0 +1,40 @@
+{
+  "title": "Online Portfolio",
+  "description": "This online portfolio is a custom-built web application designed to showcase my work and practice as a creative technologist. Inspired originally from a previous p5.js sketch, this online portfolio was rebuilt in 2024 with the intention of being a more flexible and extensible portfolio platform than what is offered by Cargo, where my original portfolio was hosted. It features a responsive layout, dynamic content loading, and interactive elements that highlight my projects and skills.\n\n<a href=\"https://editor.p5js.org/SneakRun/sketches/AWit7nt3T\" target=\"_blank\" rel=\"noopener noreferrer\">View the original p5.js sketch that inspired this portfolio.</a>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/videos/online-portfolio.webp",
+      "alt": "Online Portfolio Homepage"
+    },
+    {
+      "type": "image",
+      "src": "/images/online-portfolio/ascii.webp",
+      "alt": "Project Grid View"
+    },
+    {
+      "type": "image",
+      "src": "/images/online-portfolio/portfolio-3.webp",
+      "alt": "Individual Project Page"
+    },
+    {
+      "type": "image",
+      "src": "/images/online-portfolio/portfolio-4.webp",
+      "alt": "About Section"
+    }
+  ],
+  "details": {
+    "year": 2023,
+    "client": "Personal Project",
+    "role": "Designer and Developer",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "JSON",
+      "Git",
+      "Web Accessibility"
+    ]
+  }
+}

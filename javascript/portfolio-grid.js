@@ -1,28 +1,16 @@
 // Portfolio grid
 const portfolioItems = [
   {
-    id: 'zeta-angel',
-    title: 'Zeta_Angel',
-    description: 'Unity-Based Interactive Game Environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
-    image: 'videos/zeta-angel-cover.webp'
-  },
-  {
     id: 'john-hardy',
     title: 'R/GA Contract: John Hardy \'Moment Maker\'',
     description: 'Web-Based Procedural Flower Interface for User-End Shopping Experience, 2024',
     image: 'videos/john-hardy.webp'
   },
   {
-    id: 'neo-starcadia',
-    title: 'Neo-Starcadia',
-    description: 'Unity-Based Interactive Illustration Experience, made for Creative Computing Institute Grad Show, 2022',
-    image: 'videos/neo-starcadia.webp'
-  },
-  {
-    id: 'pulse-out',
-    title: 'Pulse-Out!',
-    description: 'AI-Assisted Web-Based Arcade Game, made in Javascript, 2024',
-    image: 'videos/pulse-out.webp'
+    id: 'titus-lempereur',
+    title: 'Titus L\'Empereur: Backdrop Projection Design',
+    description: 'Designed In Blender for the Carl Maria von Webern Theatre in Munich, Germany, 2024',
+    image: 'videos/titus.webp'
   },
   {
     id: 'gasoline-valley',
@@ -31,10 +19,34 @@ const portfolioItems = [
     image: 'videos/gasoline-valley.webp'
   },
   {
+    id: 'zeta-angel',
+    title: 'Zeta_Angel',
+    description: 'Unity-Based Interactive Game Environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
+    image: 'videos/zeta-angel-cover.webp'
+  },
+  {
+    id: 'neo-starcadia',
+    title: 'Neo-Starcadia',
+    description: 'Unity-Based Interactive Illustration Experience, made for Creative Computing Institute Grad Show, 2022',
+    image: 'videos/neo-starcadia.webp'
+  },
+  {
     id: 'dream-eater',
     title: 'Dream Eater',
     description: 'Unity-Based Interactive Game Environment, made for Central Saint Martins Degree Show, 2023',
     image: 'videos/dream-eater.webp'
+  },
+  {
+    id: 'online-portfolio',
+    title: 'Online Portfolio Website',
+    description: 'Made in HTML, CSS, and Javascript, Rebuilt Completely for 2024',
+    image: 'videos/online-portfolio.webp'
+  },
+  {
+    id: 'pulse-out',
+    title: 'Pulse-Out!',
+    description: 'AI-Assisted Web-Based Arcade Game, made in Javascript, 2024',
+    image: 'videos/pulse-out.webp'
   },
   {
     id: 'cubitts',
@@ -53,18 +65,6 @@ const portfolioItems = [
     title: 'Remesh',
     description: 'Procedurally Generated Typeface, made in Blender, 2023',
     image: 'videos/remesh.webp'
-  },
-  {
-    id: 'online-portfolio',
-    title: 'Online Portfolio Website',
-    description: 'Made in HTML, CSS, and Javascript, Rebuilt Completely for 2024',
-    image: 'videos/online-portfolio.webp'
-  },
-  {
-    id: 'titus-lempereur',
-    title: 'Titus L\'Empereur: Backdrop Projection Design',
-    description: 'Designed In Blender for the Carl Maria von Webern Theatre in Munich, Germany, 2024',
-    image: 'videos/titus.webp'
   }
 ];
 
