@@ -1,0 +1,22 @@
+{
+  "title": "Titus L'Empereur: Backdrop Design",
+  "description": "Made for the 2024 production of Titus L'Empereur at the Carl Maria von Webern Theatre in Munich, this project involved designing a dynamic backdrop projection using Blender. The design combines modern digital art techniques with traditional stage design principles, creating an immersive visual experience that complements the classical narrative while challenging the conventions of theatrical presentation",
+  "media": [
+    {
+      "type": "vimeo",
+      "src": "https://player.vimeo.com/video/1003343378?h=10db7578f4",
+      "alt": "Titus L'Empereur backdrop projection animation",
+      "isThumbnail": true
+    },
+    {
+      "type": "image",
+      "src": "images/titus-lempereur/titus-lempereur-image.webp",
+      "alt": "Still from Titus L'Empereur projection"
+    }
+  ],
+  "details": {
+    "technologies": ["3D Modeling", "Blender", "Projection Mapping", "Digital Art"],
+    "year": 2024,
+    "client": "Carl Maria von Webern Theatre, Munich"
+  }
+}

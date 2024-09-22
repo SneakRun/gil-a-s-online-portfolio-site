@@ -38,7 +38,13 @@ function loadProjectContent(projectId) {
                       wrapper.className = 'vimeo-wrapper';
                       
                       const iframe = document.createElement('iframe');
-                      iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}?loop=1&autoplay=1&muted=1`;
+                      if (item.src.includes('player.vimeo.com')) {
+                          // For unlisted videos, use the full URL
+                          iframe.src = item.src;
+                      } else {
+                          // For regular videos, construct the URL as before
+                          iframe.src = `https://player.vimeo.com/video/${item.src.split('/').pop()}?loop=1&autoplay=1&muted=1`;
+                      }
                       iframe.frameBorder = '0';
                       iframe.allow = 'autoplay; fullscreen; picture-in-picture';
                       iframe.allowFullscreen = true;
