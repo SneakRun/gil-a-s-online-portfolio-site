@@ -49,14 +49,11 @@
   font-size: var(--font-size-large);
   margin: 0;
   padding: 5px 10px;
-  border: 1px solid var(--main-text-color);
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
 }
 
-.header .main-title:hover,
 .header .main-title.scrolled {
   color: var(--menu-hover-color);
-  border-color: var(--menu-hover-color);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -87,14 +84,12 @@
   font-size: var(--font-size-base);
   white-space: nowrap;
   padding: 5px 10px;
-  border: 1px solid var(--main-text-color);
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .header nav a:hover,
 .header nav a.scrolled {
   color: var(--menu-hover-color);
-  border-color: var(--menu-hover-color);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -106,7 +101,9 @@
 .header .main-title.scrolled,
 .header nav a.scrolled {
   color: var(--menu-hover-color);
-  border-color: var(--menu-hover-color);
+}
+
+.header nav a.scrolled {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
