@@ -4,37 +4,37 @@
   "media": [
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-1.webp",
+      "src": "/images/plant-growth-visualiser/pgv-1.webp",
       "alt": "Plant Growth Visualiser Interface"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-2.webp",
+      "src": "/images/plant-growth-visualiser/pgv-2.webp",
       "alt": "Arduino Setup for Plant Growth Visualiser"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-3.webp",
+      "src": "/images/plant-growth-visualiser/pgv-3.webp",
       "alt": "Plant Growth Data Visualization"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-4.webp",
+      "src": "/images/plant-growth-visualiser/pgv-4.webp",
       "alt": "Plant Growth Visualiser Interface"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-5.webp",
+      "src": "/images/plant-growth-visualiser/pgv-5.webp",
       "alt": "Plant Growth Visualiser Interface"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-6.webp",
+      "src": "/images/plant-growth-visualiser/pgv-6.webp",
       "alt": "Plant Growth Visualiser Interface"
     },
     {
       "type": "image",
-      "src": "/images/plant-growth-visualiser/plant-growth-visualiser-7.webp",
+      "src": "/images/plant-growth-visualiser/pgv-7.webp",
       "alt": "Plant Growth Visualiser Interface"
     }
   ],
