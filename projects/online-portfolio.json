@@ -6,21 +6,6 @@
       "type": "image",
       "src": "/videos/online-portfolio.webp",
       "alt": "Online Portfolio Homepage"
-    },
-    {
-      "type": "image",
-      "src": "/images/online-portfolio/ascii.webp",
-      "alt": "Project Grid View"
-    },
-    {
-      "type": "image",
-      "src": "/images/online-portfolio/portfolio-3.webp",
-      "alt": "Individual Project Page"
-    },
-    {
-      "type": "image",
-      "src": "/images/online-portfolio/portfolio-4.webp",
-      "alt": "About Section"
     }
   ],
   "details": {
