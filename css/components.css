@@ -279,7 +279,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background: #000; /* Add a black background */
 }
+
 /* Highlight Styles */
 .highlight {
     color: #d05a40; /* A vibrant blue that complements the existing color scheme */
