@@ -68,11 +68,27 @@
   font-size: var(--font-size-base);
   color: var(--main-text-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.header nav a:hover {
+.header nav a:hover,
+.header nav a.scrolled {
   color: var(--menu-hover-color);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main-title a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-title a:hover {
+  color: var(--menu-hover-color);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* ASCII Background Styles */
