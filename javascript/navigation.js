@@ -16,7 +16,7 @@ function showSection(sectionId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('a[href="#work"]').addEventListener('click', function(e) {
+  document.querySelector('.main-title a').addEventListener('click', function(e) {
     e.preventDefault();
     if (currentSection !== 'work') {
       document.body.classList.remove('fade-out');
