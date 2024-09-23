@@ -497,7 +497,7 @@
 
   .contact-info {
     font-size: var(--font-size-base);
-    text-align: center; /* Center text */
+    text-align: left; /* Center text */
   }
 }
 
