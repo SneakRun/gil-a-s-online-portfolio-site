@@ -1,16 +1,16 @@
 // Portfolio grid
 const portfolioItems = [
   {
-    id: 'john-hardy',
-    title: 'R/GA Contract: John Hardy \'Moment Maker\'',
-    description: 'Web-Based Procedural Flower Interface for User-End Shopping Experience, 2024',
-    image: 'videos/john-hardy.webp'
-  },
-  {
     id: 'titus-lempereur',
     title: 'Titus L\'Empereur: Backdrop Projection Design',
     description: 'Designed In Blender for the Carl Maria von Webern Theatre in Munich, Germany, 2024',
     image: 'videos/titus.webp'
+  },
+  {
+    id: 'john-hardy',
+    title: 'R/GA Contract: John Hardy \'Moment Maker\'',
+    description: 'Web-Based Procedural Flower Interface for User-End Shopping Experience, 2024',
+    image: 'videos/john-hardy.webp'
   },
   {
     id: 'gasoline-valley',
