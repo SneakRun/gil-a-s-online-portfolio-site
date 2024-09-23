@@ -35,18 +35,19 @@ function loadProjectContent(projectId) {
                       mediaContainer.appendChild(video);
                   } else if (item.type === 'vimeo') {
                       const wrapper = document.createElement('div');
-                      wrapper.className = 'vimeo-wrapper';
+                      wrapper.className = 'video-wrapper';
                       
                       const iframe = document.createElement('iframe');
                       let src = item.src;
                       
                       // Check if the URL is already a player.vimeo.com URL
                       if (!src.includes('player.vimeo.com')) {
-                          // If it's not, construct the URL as before
-                          src = `https://player.vimeo.com/video/${src.split('/').pop()}`;
+                          // If it's not, construct the URL
+                          const videoId = src.split('/').pop().split('?')[0];
+                          src = `https://player.vimeo.com/video/${videoId}`;
                       }
                       
-                      // Add autoplay, loop, and muted parameters to the URL
+                      // Add parameters to the URL, keeping autoplay enabled
                       src += (src.includes('?') ? '&' : '?') + 'autoplay=1&loop=1&muted=1';
                       
                       iframe.src = src;
@@ -61,7 +62,7 @@ function loadProjectContent(projectId) {
                       wrapper.className = 'youtube-wrapper video-wrapper';
                       
                       const iframe = document.createElement('iframe');
-                      iframe.src = `https://www.youtube.com/embed/${item.src}`;
+                      iframe.src = `https://www.youtube.com/embed/${item.src}?autoplay=1&mute=1`;
                       iframe.frameBorder = '0';
                       iframe.allow = 'autoplay; fullscreen; picture-in-picture';
                       iframe.allowFullscreen = true;
