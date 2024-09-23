@@ -20,6 +20,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .portfolio-grid {
+    padding-top: var(--spacing-xsmall);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    padding-top: var(--spacing-xsmall);
+  }
+}
+
+
 /* Content area styles */
 .content-area {
   width: 85%;
@@ -431,6 +444,7 @@
   .about-text {
     font-size: var(--font-size-base);
     padding: var(--spacing-medium);
+    text-align: left;
   }
 }
 
@@ -443,6 +457,7 @@
   .about-text {
     font-size: var(--font-size-small);
     padding: var(--spacing-small);
+    text-align: left;
   }
 }
 
