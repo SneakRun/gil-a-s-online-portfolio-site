@@ -13,6 +13,17 @@ function showSection(sectionId) {
   }
 
   currentSection = sectionId.replace('-section', '');
+  updateActiveNavLink();
+}
+
+function updateActiveNavLink() {
+  const navLinks = document.querySelectorAll('.header nav a');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -38,4 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('fade-in');
     showSection('contact-section');
   });
+
+  updateActiveNavLink();
 });
