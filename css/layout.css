@@ -390,10 +390,10 @@
   box-sizing: border-box;
   position: relative;
   z-index: 1003;
-  /* margin-top: 60px; Add top margin equal to header height */
   width: 85%; /* Match the width of the portfolio grid */
   max-width: 1200px; /* Match the max-width of the portfolio grid */
-  margin: 0px auto 0; /* Center the content and add top margin */
+  margin: auto; /* Center the content */
+  /* min-height: calc(100vh - 10px); Subtract header height */
 }
 
 .about-text {
@@ -416,15 +416,23 @@
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+.about-text p {
+  margin-bottom: var(--spacing-medium);
+}
+
 @media (max-width: 768px) {
   .about-content {
     width: 90%;
     padding: var(--spacing-medium);
-    padding-top: 60px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   .about-text {
     font-size: var(--font-size-base);
+    padding: var(--spacing-medium);
   }
 }
 
@@ -432,11 +440,11 @@
   .about-content {
     width: 95%;
     padding: var(--spacing-small);
-    padding-top: 60px;
   }
 
   .about-text {
     font-size: var(--font-size-small);
+    padding: var(--spacing-small);
   }
 }
 
