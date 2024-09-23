@@ -58,9 +58,8 @@
 }
 
 .header .main-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .header .main-nav ul {
@@ -71,7 +70,7 @@
 }
 
 .header .main-nav li {
-  margin: 0 var(--spacing-medium);
+  margin-left: var(--spacing-medium);
 }
 
 .header .secondary-nav {
@@ -117,44 +116,34 @@
 /* Media queries */
 @media (max-width: 768px) {
   .header {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: auto;
     padding: var(--spacing-small);
   }
 
-  .header .main-title {
+  .header .main-nav {
     width: 100%;
-    text-align: center;
-    margin-bottom: var(--spacing-small);
-  }
-
-  .header .main-nav,
-  .header .secondary-nav {
-    position: static;
-    transform: none;
-    width: 100%;
-  }
-
-  .header .main-nav ul,
-  .header .secondary-nav ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header .main-title {
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 5px 10px;
   }
 
   .header .main-nav ul {
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
     margin: 0;
+    padding: 0;
   }
 
-  .header .secondary-nav ul {
-    width: 100%;
-    margin: 0;
-  }
-
-  .header .main-nav li,
-  .header .secondary-nav li {
-    margin: 0 var(--spacing-small);
+  .header .main-nav li {
+    margin: 0 0 0 var(--spacing-small);
   }
 
   .header nav a {
@@ -168,31 +157,40 @@
 }
 
 @media (max-width: 480px) {
-  .header .main-nav ul,
-  .header .secondary-nav ul {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: var(--spacing-small);
+  }
+
+  .header .main-title {
     width: 100%;
-    justify-content: space-between;
+    text-align: center;
+    margin-bottom: var(--spacing-small);
   }
 
-  .header .main-nav,
-  .header .secondary-nav {
-    display: flex;
+  .header .main-nav {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .header .main-nav ul {
     justify-content: center;
+    flex-wrap: nowrap;
   }
 
-  .header .main-nav ul,
-  .header .secondary-nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  .header .main-nav li,
-  .header .secondary-nav li {
+  .header .main-nav li {
     margin: 0 var(--spacing-small);
   }
 
+  .header nav a {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
   .content-area {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 }
 
