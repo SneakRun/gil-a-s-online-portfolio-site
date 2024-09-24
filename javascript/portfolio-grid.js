@@ -3,7 +3,7 @@ const portfolioItems = [
   {
     id: 'titus-lempereur',
     title: 'Titus L\'Empereur: Opera Backdrop Design',
-    description: 'Designed in Blender for the Carl Maria von Webern Theatre in Munich, Germany, 2024',
+    description: 'Designed in Blender for the Carl Maria von Weber Theatre in Munich, Germany, 2024',
     image: 'videos/titus.webp',
     width: 480,
     height: 270
