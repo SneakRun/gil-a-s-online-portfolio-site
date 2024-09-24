@@ -1,6 +1,6 @@
 {
   "title": "Plant Growth Visualiser",
-  "description": "Plant Growth Visualiser (2022) is a prototype developed using p5.js, C++, and Arduino to create dynamic floral patterns that evolve in real-time in response to the growth of houseplants. This project explores the intersections of mindfulness practices, technology, and home environments for people with anxiety disorders.\n\nAn ultrasonic distance sensor measures the plant's size, and the data is processed through a custom procedural algorithm. The algorithm generates soothing visuals with random colors and sizes, carefully designed through research to facilitate meditative experiences.",
+  "description": "Plant Growth Visualiser (2022) is a prototype developed using p5.js, C++, and Arduino to create dynamic floral patterns that evolve in real-time in response to the growth of houseplants.\n\nThis project explores the intersections of mindfulness practices, technology, and home environments for people with anxiety disorders. An ultrasonic distance sensor measures the plant's size, and the data is processed through a custom procedural algorithm. The algorithm generates soothing visuals with random colors and sizes, carefully designed through research to facilitate meditative experiences.",
   "media": [
     {
       "type": "image",
