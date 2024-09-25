@@ -101,3 +101,12 @@ function loadProjectContent(projectId) {
       })
       .catch(error => console.error('Error loading project data:', error));
 }
+
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.projectId) {
+    loadProjectContent(event.state.projectId);
+  } else {
+    // Handle navigation to the main page
+    window.location.href = 'index.html';
+  }
+});

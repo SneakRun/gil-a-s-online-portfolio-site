@@ -62,10 +62,16 @@
     </div>
     
     <!-- JavaScript files -->
-    <script src="javascript/ascii-background.js" onerror="console.error('Failed to load ascii-background.js')"></script>
+    <script src="javascript/ascii-background.js"></script>
     <script src="javascript/header-scroll.js"></script>
     <script src="javascript/navigation.js"></script>
+    <script src="javascript/project-loader.js"></script>
     <script src="javascript/page-transitions.js"></script>
-    <script src="javascript/portfolio-grid.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.remove('fade-out');
+        document.body.classList.add('fade-in');
+      });
+    </script>
   </body>
 </html>

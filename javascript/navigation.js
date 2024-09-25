@@ -14,6 +14,7 @@ function showSection(sectionId) {
 
   currentSection = sectionId.replace('-section', '');
   updateActiveNavLink();
+  history.pushState({ section: sectionId }, '', `#${currentSection}`);
 }
 
 function updateActiveNavLink() {
@@ -51,4 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   updateActiveNavLink();
+});
+
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.section) {
+    showSection(event.state.section + '-section');
+  }
 });
