@@ -19,26 +19,31 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    document.body.classList.add('fade-out');
-
     if (!isPopState) {
-      // Start loading the new page immediately
+      // Start loading the new page immediately without fading out
       fetch(url)
         .then(response => response.text())
         .then(html => {
           const parser = new DOMParser();
           const newDoc = parser.parseFromString(html, 'text/html');
-          document.body.innerHTML = newDoc.body.innerHTML;
-          document.title = newDoc.title;
           
-          // Update the URL
-          history.pushState({}, '', url);
+          // Fade out the current content
+          document.body.classList.add('fade-out');
           
-          // Re-attach event listeners and initialize scripts
-          initializeScripts();
-          
-          document.body.classList.remove('fade-out');
-          document.body.classList.add('fade-in');
+          setTimeout(() => {
+            document.body.innerHTML = newDoc.body.innerHTML;
+            document.title = newDoc.title;
+            
+            // Update the URL
+            history.pushState({}, '', url);
+            
+            // Re-attach event listeners and initialize scripts
+            initializeScripts();
+            
+            // Fade in the new content
+            document.body.classList.remove('fade-out');
+            document.body.classList.add('fade-in');
+          }, 300); // This timeout should match the fade-out transition duration
         })
         .catch(error => {
           console.error('Error loading new page:', error);
