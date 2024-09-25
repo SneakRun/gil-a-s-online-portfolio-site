@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.classList.add('fade-in');
 
   // Function to handle page transitions
-  function handlePageTransition(url) {
+  function handlePageTransition(url, isPopState = false) {
     const currentPath = window.location.pathname;
     const newPath = new URL(url, window.location.origin).pathname;
 
@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPath === newPath && url.includes('#')) {
       const sectionId = url.split('#')[1];
       showSection(sectionId + '-section');
-      history.pushState({ section: sectionId }, '', url);
+      if (!isPopState) {
+        history.pushState({ section: sectionId }, '', url);
+      }
       return;
     }
 
@@ -22,7 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('fade-out');
 
     setTimeout(() => {
-      window.location = url;
+      if (!isPopState) {
+        window.location = url;
+      }
+      document.body.classList.remove('fade-out');
+      document.body.classList.add('fade-in');
     }, 300);
   }
 
@@ -36,8 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Handle browser back/forward buttons
-  window.addEventListener('popstate', function() {
-    handleSubpageTransition();
+  window.addEventListener('popstate', function(event) {
+    const url = window.location.href;
+    handlePageTransition(url, true);
   });
 });
 

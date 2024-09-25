@@ -63,5 +63,10 @@ function initializeNavigation() {
 document.addEventListener('DOMContentLoaded', initializeNavigation);
 
 window.addEventListener('popstate', function(event) {
-  handleSubpageTransition();
+  const url = window.location.href;
+  if (url.includes('#')) {
+    handleSubpageTransition();
+  } else {
+    handleMainPageTransition();
+  }
 });
