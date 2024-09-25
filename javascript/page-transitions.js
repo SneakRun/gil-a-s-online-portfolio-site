@@ -22,5 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300); // 300ms matches the transition duration in the CSS
     }
   });
+
+  window.addEventListener('popstate', function(event) {
+    if (event.state) {
+      navigateTo(document.location.href, false);
+    }
+  });
 });
+
+function navigateTo(url, addToHistory = true) {
+  document.body.classList.remove('fade-in');
+  document.body.classList.add('fade-out');
+
+  setTimeout(() => {
+    if (addToHistory) {
+      history.pushState({ url: url }, '', url);
+    }
+    window.location = url;
+  }, 300);
+}
 
