@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPath = window.location.pathname;
     const newPath = new URL(url, window.location.origin).pathname;
 
-    // If it's an internal navigation (same path, different hash), don't apply transition
     if (currentPath === newPath && url.includes('#')) {
       const sectionId = url.split('#')[1];
       showSection(sectionId + '-section');
@@ -20,16 +19,49 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    document.body.classList.remove('fade-in');
     document.body.classList.add('fade-out');
 
-    setTimeout(() => {
-      if (!isPopState) {
-        window.location = url;
-      }
+    if (!isPopState) {
+      // Start loading the new page immediately
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const newDoc = parser.parseFromString(html, 'text/html');
+          document.body.innerHTML = newDoc.body.innerHTML;
+          document.title = newDoc.title;
+          
+          // Update the URL
+          history.pushState({}, '', url);
+          
+          // Re-attach event listeners and initialize scripts
+          initializeScripts();
+          
+          document.body.classList.remove('fade-out');
+          document.body.classList.add('fade-in');
+        })
+        .catch(error => {
+          console.error('Error loading new page:', error);
+          window.location = url; // Fallback to traditional navigation
+        });
+    } else {
       document.body.classList.remove('fade-out');
       document.body.classList.add('fade-in');
-    }, 300);
+    }
+  }
+
+  function initializeScripts() {
+    if (typeof initializeNavigation === 'function') {
+      initializeNavigation();
+    }
+    if (typeof loadProjectContent === 'function') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id');
+      if (projectId) {
+        loadProjectContent(projectId);
+      }
+    }
+    // Add other initialization functions as needed
   }
 
   // Add click event listeners to all links on the page

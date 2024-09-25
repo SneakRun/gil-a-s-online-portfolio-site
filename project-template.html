@@ -49,13 +49,9 @@
             document.body.classList.remove('fade-out');
             document.body.classList.add('fade-in');
           }
-          const urlParams = new URLSearchParams(window.location.search);
-          const projectId = urlParams.get('id');
-          if (projectId) {
-            loadProjectContent(projectId);
-          }
+          // Project content will be loaded by initializeScripts in handlePageTransition
         });
-      </script>
+    </script>
 </body>
 </body>
 </html>
