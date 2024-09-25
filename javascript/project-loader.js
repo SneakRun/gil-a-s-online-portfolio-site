@@ -114,8 +114,5 @@ function loadProjectContent(projectId) {
   
   function handleMainPageTransition() {
     window.projectLoaded = false;
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-      window.location.href = 'index.html';
-    }, 300);
+    window.location.href = 'index.html';
   }
