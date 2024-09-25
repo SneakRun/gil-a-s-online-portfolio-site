@@ -26,7 +26,7 @@ function updateActiveNavLink() {
   });
 }
 
-function initializeNavigation() {
+document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.main-title a').addEventListener('click', function(e) {
     e.preventDefault();
     if (currentSection !== 'work') {
@@ -51,10 +51,4 @@ function initializeNavigation() {
   });
 
   updateActiveNavLink();
-}
-
-// Export the initialization function
-window.initializeNavigation = initializeNavigation;
-
-// Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initializeNavigation);
+});
