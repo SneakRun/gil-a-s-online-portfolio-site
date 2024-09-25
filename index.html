@@ -35,7 +35,7 @@
     <!-- Main content area -->
     <div id="content-area" class="content-area">
       <!-- Work section -->
-      <div id="work-section" class="portfolio-grid">
+      <div id="work-section" class="portfolio-grid" style="display: grid;">
         <!-- Portfolio items will be dynamically inserted here -->
       </div>
       
@@ -66,12 +66,16 @@
     <script src="javascript/header-scroll.js"></script>
     <script src="javascript/navigation.js"></script>
     <script src="javascript/project-loader.js"></script>
+    <script src="javascript/portfolio-grid.js"></script>
     <script src="javascript/page-transitions.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
           document.body.classList.remove('fade-out');
           document.body.classList.add('fade-in');
+        }
+        if (typeof initializeNavigation === 'function') {
+          initializeNavigation();
         }
       });
     </script>

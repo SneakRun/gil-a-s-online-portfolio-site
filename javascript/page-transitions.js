@@ -11,14 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('fade-out');
 
     setTimeout(() => {
-      window.location = url;
-    }, 300); // 300ms matches the transition duration in the CSS
+      if (url.includes('#')) {
+        const sectionId = url.split('#')[1];
+        showSection(sectionId + '-section');
+        history.pushState({ section: sectionId }, '', url);
+      } else {
+        window.location = url;
+      }
+      document.body.classList.remove('fade-out');
+      document.body.classList.add('fade-in');
+    }, 300);
   }
 
   // Add click event listeners to all links on the page
   document.body.addEventListener('click', function(e) {
     const link = e.target.closest('a');
-    if (link && link.hostname === window.location.hostname && !link.getAttribute('href').startsWith('#')) {
+    if (link && link.hostname === window.location.hostname) {
       e.preventDefault();
       handlePageTransition(link.href);
     }
@@ -26,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle browser back/forward buttons
   window.addEventListener('popstate', function() {
-    handlePageTransition(window.location.href);
+    handleSubpageTransition();
   });
 });
 

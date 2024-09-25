@@ -1,7 +1,7 @@
 let currentSection = 'work';
 
 function showSection(sectionId) {
-  if (sectionId === currentSection) return;
+  if (sectionId === currentSection + '-section') return;
 
   document.getElementById('work-section').style.display = 'none';
   document.getElementById('about-section').style.display = 'none';
@@ -10,6 +10,7 @@ function showSection(sectionId) {
 
   if (sectionId === 'work-section') {
     document.querySelector('.portfolio-grid').style.display = 'grid';
+    renderPortfolioGrid(); // Re-render the grid when showing the work section
   }
 
   currentSection = sectionId.replace('-section', '');
@@ -17,7 +18,6 @@ function showSection(sectionId) {
   history.pushState({ section: currentSection }, '', `#${currentSection}`);
 }
 
-// Add this function to handle transitions from subpages
 function handleSubpageTransition() {
   const hash = window.location.hash.slice(1);
   if (hash) {
@@ -39,38 +39,29 @@ function updateActiveNavLink() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function initializeNavigation() {
   document.querySelector('.main-title a').addEventListener('click', function(e) {
     e.preventDefault();
-    if (currentSection !== 'work') {
-      document.body.classList.remove('fade-out');
-      document.body.classList.add('fade-in');
-      showSection('work-section');
-    }
+    showSection('work-section');
   });
 
   document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
     e.preventDefault();
-    document.body.classList.remove('fade-out');
-    document.body.classList.add('fade-in');
     showSection('about-section');
   });
 
   document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
     e.preventDefault();
-    document.body.classList.remove('fade-out');
-    document.body.classList.add('fade-in');
     showSection('contact-section');
   });
 
   updateActiveNavLink();
+  showSection('work-section'); // Ensure work section is visible by default
+  renderPortfolioGrid(); // Call this function to render the grid
+}
 
-  // Add this line to handle initial load or refresh
-  handleSubpageTransition();
-});
+document.addEventListener('DOMContentLoaded', initializeNavigation);
 
 window.addEventListener('popstate', function(event) {
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-    handleSubpageTransition();
-  }
+  handleSubpageTransition();
 });
