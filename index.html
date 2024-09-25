@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/transitions.css">
   </head>
-  <body>
+  <body class="fade-out">
     <!-- Background elements -->
     <div class="main-page-backdrop"></div>
     <canvas id="ascii-canvas"></canvas>
@@ -73,6 +73,11 @@
         if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
           document.body.classList.remove('fade-out');
           document.body.classList.add('fade-in');
+        } else {
+          setTimeout(() => {
+            document.body.classList.remove('fade-out');
+            document.body.classList.add('fade-in');
+          }, 100); // Small delay to ensure the fade-in effect is visible
         }
         if (typeof initializeNavigation === 'function') {
           initializeNavigation();

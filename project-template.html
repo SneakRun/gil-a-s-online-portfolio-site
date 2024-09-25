@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/transitions.css">
 </head>
-<body>
+<body class="fade-out">
     <div class="backdrop"></div>
     <canvas id="ascii-canvas"></canvas>
     <header class="header subpage-header">
@@ -48,6 +48,11 @@
           if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
             document.body.classList.remove('fade-out');
             document.body.classList.add('fade-in');
+          } else {
+            setTimeout(() => {
+              document.body.classList.remove('fade-out');
+              document.body.classList.add('fade-in');
+            }, 100); // Small delay to ensure the fade-in effect is visible
           }
           const urlParams = new URLSearchParams(window.location.search);
           const projectId = urlParams.get('id');
@@ -55,7 +60,6 @@
             loadProjectContent(projectId);
           }
         });
-      </script>
-</body>
+    </script>
 </body>
 </html>
