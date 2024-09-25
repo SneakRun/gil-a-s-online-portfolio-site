@@ -14,7 +14,19 @@ function showSection(sectionId) {
 
   currentSection = sectionId.replace('-section', '');
   updateActiveNavLink();
-  history.pushState({ section: sectionId }, '', `#${currentSection}`);
+  history.pushState({ section: currentSection }, '', `#${currentSection}`);
+}
+
+// Add this function to handle transitions from subpages
+function handleSubpageTransition() {
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    showSection(`${hash}-section`);
+  } else {
+    showSection('work-section');
+  }
+  document.body.classList.remove('fade-out');
+  document.body.classList.add('fade-in');
 }
 
 function updateActiveNavLink() {
@@ -52,10 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   updateActiveNavLink();
+
+  // Add this line to handle initial load or refresh
+  handleSubpageTransition();
 });
 
 window.addEventListener('popstate', function(event) {
-  if (event.state && event.state.section) {
-    showSection(event.state.section + '-section');
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+    handleSubpageTransition();
   }
 });

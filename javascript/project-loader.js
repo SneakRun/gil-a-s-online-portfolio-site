@@ -107,6 +107,13 @@ window.addEventListener('popstate', function(event) {
     loadProjectContent(event.state.projectId);
   } else {
     // Handle navigation to the main page
-    window.location.href = 'index.html';
+    handleMainPageTransition();
   }
 });
+
+function handleMainPageTransition() {
+  document.body.classList.add('fade-out');
+  setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 300);
+}

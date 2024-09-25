@@ -69,8 +69,10 @@
     <script src="javascript/page-transitions.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        document.body.classList.remove('fade-out');
-        document.body.classList.add('fade-in');
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+          document.body.classList.remove('fade-out');
+          document.body.classList.add('fade-in');
+        }
       });
     </script>
   </body>
