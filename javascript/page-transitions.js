@@ -7,19 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to handle page transitions
   function handlePageTransition(url) {
+    const currentPath = window.location.pathname;
+    const newPath = new URL(url, window.location.origin).pathname;
+
+    // If it's an internal navigation (same path, different hash), don't apply transition
+    if (currentPath === newPath && url.includes('#')) {
+      const sectionId = url.split('#')[1];
+      showSection(sectionId + '-section');
+      history.pushState({ section: sectionId }, '', url);
+      return;
+    }
+
     document.body.classList.remove('fade-in');
     document.body.classList.add('fade-out');
 
     setTimeout(() => {
-      if (url.includes('#')) {
-        const sectionId = url.split('#')[1];
-        showSection(sectionId + '-section');
-        history.pushState({ section: sectionId }, '', url);
-      } else {
-        window.location = url;
-      }
-      document.body.classList.remove('fade-out');
-      document.body.classList.add('fade-in');
+      window.location = url;
     }, 300);
   }
 
