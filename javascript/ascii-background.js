@@ -85,28 +85,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Main drawing function
       function draw() {
-        // Clear the canvas
         ctx.fillStyle = getComputedColor('--ascii-background-color');
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = getComputedColor('--ascii-text-color');
         for (let y = 0; y < rows; y++) {
-            for (let x = 0; x < cols; x++) {
-                // Generate noise value
-                const noiseValue = noise(x * noiseScale, y * noiseScale, zOffset);
-
-                // Select ASCII character based on noise value
-                const index = Math.floor((noiseValue * 0.5 + 0.5) * (asciiChars.length - 1));
-                const char = asciiChars[index];
-
-                // Draw the character
-                ctx.fillText(char, x * fontSize, y * fontSize);
-            }
+          for (let x = 0; x < cols; x++) {
+            const noiseValue = noise(x * noiseScale, y * noiseScale, zOffset);
+            const index = Math.floor((noiseValue * 0.5 + 0.5) * (asciiChars.length - 1));
+            ctx.fillText(asciiChars[index], x * fontSize, y * fontSize);
+          }
         }
 
-        // Increment z-offset for animation
         zOffset += timeFactor;
-        animationFrameId = requestIdleCallback(draw);
+        animationFrameId = requestAnimationFrame(draw);
       }
 
       // Initialization function
