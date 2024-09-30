@@ -1,3 +1,5 @@
+const projectCache = new Map();
+
 async function loadProjectContent(projectId) {
   if (window.projectLoaded) return;
 
@@ -6,10 +8,22 @@ async function loadProjectContent(projectId) {
   if (mediaContainer) mediaContainer.innerHTML = '';
   if (tagsContainer) tagsContainer.innerHTML = '';
 
+  const loadingMessage = document.createElement('p');
+  loadingMessage.textContent = 'Loading project data...';
+  mediaContainer.appendChild(loadingMessage);
+
   try {
-    const response = await fetch(`projects/${projectId}.json`);
-    if (!response.ok) throw new Error('Failed to fetch project data');
-    const data = await response.json();
+    let data;
+    if (projectCache.has(projectId)) {
+      data = projectCache.get(projectId);
+    } else {
+      const response = await fetch(`projects/${projectId}.json`);
+      if (!response.ok) throw new Error('Failed to fetch project data');
+      data = await response.json();
+      projectCache.set(projectId, data);
+    }
+
+    mediaContainer.removeChild(loadingMessage);
 
     document.title = `${data.title} - Gil Altarace Sherman`;
     document.getElementById('project-title').textContent = data.title;
@@ -34,7 +48,10 @@ async function loadProjectContent(projectId) {
     window.projectLoaded = true;
   } catch (error) {
     console.error('Error loading project data:', error);
-    // Implement proper error handling here (e.g., show error message to user)
+    mediaContainer.removeChild(loadingMessage);
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'Failed to load project data. Please try again later.';
+    mediaContainer.appendChild(errorMessage);
   }
 }
 
@@ -64,6 +81,7 @@ function renderImage(item, container) {
   const img = document.createElement('img');
   img.src = item.src;
   img.alt = item.alt;
+  img.loading = 'lazy';
   container.appendChild(img);
 }
 
@@ -118,6 +136,7 @@ function renderSideBySide(item, container) {
     const img = document.createElement('img');
     img.src = image.src;
     img.alt = image.alt;
+    img.loading = 'lazy';
     sideBySideContainer.appendChild(img);
   });
   container.appendChild(sideBySideContainer);
