@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         
-        fontSize = Math.max(6, Math.floor(canvas.width / 130));
+        // Set a minimum font size and calculate based on screen width
+        const minFontSize = 8;
+        const maxFontSize = 16;
+        fontSize = Math.max(minFontSize, Math.min(maxFontSize, Math.floor(canvas.width / 80)));
         
-        cols = Math.ceil(canvas.width / fontSize) + 1;
+        cols = Math.ceil(canvas.width / fontSize);
         rows = Math.ceil(canvas.height / fontSize);
         
         ctx.font = `${fontSize}px 'IBM Plex Mono', monospace`;
