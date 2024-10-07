@@ -87,6 +87,14 @@ const portfolioItems = [
     image: 'videos/remesh.webp',
     width: 480,
     height: 270
+  },
+  {
+    id: 'concept-illustrations',
+    title: 'Concept Illustrations',
+    description: 'Concept illustrations portfolio',
+    image: 'images/concept-illustrations.webp',
+    width: 480,
+    height: 270
   }
 ];
 
