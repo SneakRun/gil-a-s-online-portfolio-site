@@ -1,8 +1,8 @@
 const projectCache = new Map();
 
 async function loadProjectContent(projectId) {
-  if (window.projectLoaded) return;
 
+  if (window.projectLoaded) return;
   const mediaContainer = document.querySelector('.project-media');
   const tagsContainer = document.getElementById('project-tags');
   if (mediaContainer) mediaContainer.innerHTML = '';
