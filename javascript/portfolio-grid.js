@@ -2,7 +2,7 @@
 const portfolioItems = [
   {
     id: 'titus-lempereur',
-    title: 'Titus L\'Empereur: Opera Backdrop Design',
+    title: 'Titus L\'Empereur: Opera Backdrop | Blender',
     description: 'Designed in Blender for the Carl Maria von Weber Theatre in Munich, Germany, 2024',
     image: 'videos/titus.webp',
     width: 480,
@@ -18,7 +18,7 @@ const portfolioItems = [
   },
   {
     id: 'gasoline-valley',
-    title: 'It Took Three Weeks To Scroll Through The Gasoline Valley',
+    title: 'It Took Three Weeks To Scroll Through The Gasoline Valley | Blender',
     description: 'Digital world made for Central Saint Martins Virtual Group Show, made in Blender, 2022',
     image: 'videos/gasoline-valley.webp',
     width: 480,
@@ -26,24 +26,24 @@ const portfolioItems = [
   },
   {
     id: 'zeta-angel',
-    title: 'Zeta_Angel',
-    description: 'Unity-based interactive game environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
+    title: 'Zeta_Angel | UEFN/Unity',
+    description: 'Interactive game environment, made for Hypha Studios\' \'HARD WIRED\' Exhibition, London, 2024',
     image: 'videos/zeta-angel-cover.webp',
     width: 480,
     height: 270
   },
   {
     id: 'neo-starcadia',
-    title: 'Neo-Starcadia',
-    description: 'Unity-based interactive illustration experience, made for Creative Computing Institute Grad Show, 2022',
+    title: 'Neo-Starcadia | Unity ',
+    description: 'Interactive illustration experience, made for Creative Computing Institute Grad Show, 2022',
     image: 'videos/neo-starcadia.webp',
     width: 480,
     height: 270
   },
   {
     id: 'dream-eater',
-    title: 'Dream Eater',
-    description: 'Unity-based interactive game environment, made for Central Saint Martins Degree Show, 2023',
+    title: 'Dream Eater | UEFN/Unity',
+    description: 'Interactive game environment, made for Central Saint Martins Degree Show, 2023',
     image: 'videos/dream-eater.webp',
     width: 480,
     height: 270
@@ -58,7 +58,7 @@ const portfolioItems = [
   },
   {
     id: 'pulse-out',
-    title: 'Pulse-Out!',
+    title: 'Pulse-Out! | p5.js',
     description: 'AI-assisted web-based arcade game, made in Javascript, 2024',
     image: 'videos/pulse-out.webp',
     width: 480,
@@ -74,7 +74,7 @@ const portfolioItems = [
   },
   {
     id: 'plant-growth-visualiser',
-    title: 'Plant Growth Visualiser',
+    title: 'Plant Growth Visualiser | Arduino x p5.js',
     description: 'Arduino x p5.js product prototype for human-centred digital design, 2022',
     image: 'images/plant-growth-vis.webp',
     width: 480,
@@ -82,20 +82,20 @@ const portfolioItems = [
   },
   {
     id: 'remesh',
-    title: 'Remesh',
+    title: 'Remesh | Blender',
     description: 'Procedurally generated typeface, made in Blender, 2023',
     image: 'videos/remesh.webp',
     width: 480,
     height: 270
   },
-  {
-    id: 'concept-illustrations',
-    title: 'Concept Illustrations',
-    description: 'Concept illustrations portfolio',
-    image: 'images/concept-illustrations.webp',
-    width: 480,
-    height: 270
-  }
+  // {
+  //   id: 'concept-illustrations',
+  //   title: 'Concept Illustrations',
+  //   description: 'Concept illustrations portfolio',
+  //   image: 'images/concept-illustrations.webp',
+  //   width: 480,
+  //   height: 270
+  // }
 ];
 
 function createPortfolioItem(item) {
