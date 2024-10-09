@@ -1,6 +1,6 @@
 {
   "title": "Dream Eater",
-  "description": "<a href=\"https://www.artsthread.com/events/globaldesigngraduateshow/vote/visual#/project/dream-eater\" target=\"_blank\" rel=\"noopener noreferrer\">Shortlisted for Global Design Graduate Show 2023</a>\n\nMade for the Central Saint Martins 2023 BA Fine Art Degree Show, Dream Eater (2023) is an immersive, interactive environment that functions as a stimulating playground of digital objects.\n\nDeveloped using Unity Engine, Blender, and salvaged game assets, the project explores how kit bashing can shape regenerative practices in virtual materials. By reassembling digital found objects, the work aims to demonstrate how this approach can bring more playfulness to 3D modelling, making it more accessible to both beginners and experienced users.\n\nDrawing on nostalgic imagery, the game uses childhood experiences as a framework for exploring intersections between Ontology, Semiology, and Pervasive Game Theory.",
+  "description": "<a href=\"https://www.artsthread.com/events/globaldesigngraduateshow/vote/visual#/project/dream-eater\" target=\"_blank\" rel=\"noopener noreferrer\">Shortlisted for Global Design Graduate Show 2023</a>\n\nMade for the Central Saint Martins 2023 BA Fine Art Degree Show, Dream Eater (2023) is an immersive, interactive environment that functions as a stimulating playground of digital objects.\n\nDeveloped using Unity Engine, UEFN, Blender, and salvaged game assets, the project explores how kit bashing can shape regenerative practices in virtual materials. By reassembling digital found objects, the work aims to demonstrate how this approach can bring more playfulness to 3D modelling, making it more accessible to both beginners and experienced users.\n\nDrawing on nostalgic imagery, the game uses childhood experiences as a framework for exploring intersections between Ontology, Semiology, and Pervasive Game Theory.",
   "media": [
     {
       "type": "vimeo",
@@ -30,7 +30,7 @@
     }
   ],
   "details": {
-    "technologies": ["Interactive Design", "Kit-Bashing", "3D Modeling", "Blender", "Unity", "C#"],
+    "technologies": ["Interactive Design", "Kit-Bashing", "3D Modeling", "Blender", "Unity", "C#", "UEFN"],
     "year": 2023,
     "client": "Art Gallery of Ontario"
   }
