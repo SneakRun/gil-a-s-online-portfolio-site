@@ -10,15 +10,15 @@ const portfolioItems = [
   },
   {
     id: 'john-hardy',
-    title: 'R/GA Contract: John Hardy \'Moment Maker\'',
-    description: 'Web-based procedural flower interface for user-end shopping experience, 2024',
+    title: 'R/GA Contract:\'Moment Maker\'\n <br>| Webkit x Node.js',
+    description: 'Web-based procedural flower interface for the John Hardy user-end shopping experience, 2024',
     image: 'videos/john-hardy.webp',
     width: 480,
     height: 270
   },
   {
     id: 'gasoline-valley',
-    title: 'It Took Three Weeks To Scroll Through The Gasoline Valley | Blender',
+    title: 'It Took Three Weeks To Scroll Through The Gasoline Valley <br> | Blender',
     description: 'Digital world made for Central Saint Martins Virtual Group Show, made in Blender, 2022',
     image: 'videos/gasoline-valley.webp',
     width: 480,
@@ -50,7 +50,7 @@ const portfolioItems = [
   },
   {
     id: 'online-portfolio',
-    title: 'Online Portfolio Website',
+    title: 'Online Portfolio Website | Webkit',
     description: 'Made in HTML, CSS, and Javascript, rebuilt completely for 2024',
     image: 'videos/online-portfolio.webp',
     width: 480,
@@ -66,7 +66,7 @@ const portfolioItems = [
   },
   {
     id: 'cubitts',
-    title: 'Sunglasses Design Commission for Cubitts',
+    title: 'Sunglasses Design Commission for Cubitts <br> | Product Design',
     description: 'Designed and manufactured as part of Cubitts\' \'Artists of Hampstead\' Collection, 2022',
     image: 'images/cubitts.webp',
     width: 480,
