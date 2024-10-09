@@ -88,14 +88,14 @@ const portfolioItems = [
     width: 480,
     height: 270
   },
-  // {
-  //   id: 'concept-illustrations',
-  //   title: 'Concept Illustrations',
-  //   description: 'Concept illustrations portfolio',
-  //   image: 'images/concept-illustrations.webp',
-  //   width: 480,
-  //   height: 270
-  // }
+  {
+    id: 'concept-illustrations',
+    title: 'Concept Illustrations',
+    description: 'Concept illustrations portfolio',
+    image: 'images/concept-illustrations.webp',
+    width: 480,
+    height: 270
+  }
 ];
 
 function createPortfolioItem(item) {
