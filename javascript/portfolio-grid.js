@@ -49,14 +49,6 @@ const portfolioItems = [
     height: 270
   },
   {
-    id: 'online-portfolio',
-    title: 'Online Portfolio Website | Webkit',
-    description: 'Made in HTML, CSS, and Javascript, rebuilt completely for 2024',
-    image: 'videos/online-portfolio.webp',
-    width: 480,
-    height: 270
-  },
-  {
     id: 'pulse-out',
     title: 'Pulse-Out! | p5.js',
     description: 'AI-assisted web-based arcade game, made in Javascript, 2024',
@@ -65,10 +57,16 @@ const portfolioItems = [
     height: 270
   },
   {
-    id: 'cubitts',
-    title: 'Sunglasses Design Commission for Cubitts <br> | Product Design',
-    description: 'Designed and manufactured as part of Cubitts\' \'Artists of Hampstead\' Collection, 2022',
-    image: 'images/cubitts.webp',
+    id: 'concept-illustrations',
+    title: 'Concept Illustrations',
+    description: 'Personal illustration portfolio',
+    thumbnails: [
+      '/images/concept-illustrations/concept-sketch-12.webp',
+      '/images/concept-illustrations/concept-sketch-7.webp',
+      '/images/concept-illustrations/concept-sketch-1.webp',
+      '/images/concept-illustrations/concept-sketch-2.webp',
+      '/images/concept-illustrations/concept-sketch-8.webp'
+    ],
     width: 480,
     height: 270
   },
@@ -81,6 +79,14 @@ const portfolioItems = [
     height: 270
   },
   {
+    id: 'cubitts',
+    title: 'Sunglasses Design Commission for Cubitts <br> | Product Design',
+    description: 'Designed and manufactured as part of Cubitts\' \'Artists of Hampstead\' Collection, 2022',
+    image: 'images/cubitts.webp',
+    width: 480,
+    height: 270
+  },
+  {
     id: 'remesh',
     title: 'Remesh | Blender',
     description: 'Procedurally generated typeface, made in Blender, 2023',
@@ -89,16 +95,34 @@ const portfolioItems = [
     height: 270
   },
   {
-    id: 'concept-illustrations',
-    title: 'Concept Illustrations',
-    description: 'Concept illustrations portfolio',
-    image: 'images/concept-illustrations.webp',
+    id: 'online-portfolio',
+    title: 'Online Portfolio Website | Webkit',
+    description: 'Made in HTML, CSS, and Javascript, rebuilt completely for 2024',
+    image: 'videos/online-portfolio.webp',
     width: 480,
     height: 270
-  }
+  },
 ];
 
 function createPortfolioItem(item) {
+  if (item.id === 'concept-illustrations' && item.thumbnails) {
+    return `
+      <div class="portfolio-item">
+        <a href="project-template.html?id=${item.id}" class="portfolio-item-link">
+          <div class="portfolio-item-media carousel-container">
+            ${item.thumbnails.map((thumb, index) => `
+              <img src="${thumb}" alt="${item.title} - Image ${index + 1}" loading="lazy" class="carousel-image ${index === 0 ? 'active' : ''}" width="${item.width}" height="${item.height}">
+            `).join('')}
+          </div>
+          <div class="portfolio-item-text">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+          </div>
+        </a>
+      </div>
+    `;
+  }
+  
   return `
     <div class="portfolio-item">
       <a href="project-template.html?id=${item.id}" class="portfolio-item-link">
@@ -118,6 +142,20 @@ function renderPortfolioGrid() {
   const gridContainer = document.querySelector('.portfolio-grid');
   const gridContent = portfolioItems.map(createPortfolioItem).join('');
   gridContainer.innerHTML = gridContent;
+  initCarousel();
+}
+
+function initCarousel() {
+  const carousels = document.querySelectorAll('.carousel-container');
+  carousels.forEach(carousel => {
+    let currentIndex = 0;
+    const images = carousel.querySelectorAll('.carousel-image');
+    setInterval(() => {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }, 3000); // Change image every 3 seconds
+  });
 }
 
 document.addEventListener('DOMContentLoaded', renderPortfolioGrid);
