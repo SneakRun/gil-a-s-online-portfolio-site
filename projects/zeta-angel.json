@@ -1,6 +1,6 @@
 {
   "title": "Zeta_Angel",
-  "description": "Zeta_Angel (2024) is an interactive game environment that questions how we perceive and interact with objects in real spaces against virtual ones.\n\nBuilt from found digital objects and ripped game assets, the virtual environment is a composite of discarded digital artefacts, exploring the differences between human and virtual language frameworks.\n\nMade in Unity and Blender using kit-bashing techniques, the process aims to challenge and reimagine current digital creation to be more open and accessible.\n\n<a href='https://hyphastudios.com/autonomous_sheep/' target='_blank' rel='noopener noreferrer'>Exhibited At Hypha Studios 'HARD WIRED' Show 2024</a>",
+  "description": "Zeta_Angel (2024) is an interactive game environment that questions how we perceive and interact with objects in real spaces against virtual ones.\n\nBuilt from found digital objects and ripped game assets, the virtual environment is a composite of discarded digital artefacts, exploring the differences between human and virtual language frameworks.\n\nMade in Unity and Blender using kit-bashing techniques, the process aims to challenge and reimagine current digital creation to be more open and accessible. This project was also recently adapted into UEFN for more platform compatibility.\n\n<a href='https://hyphastudios.com/autonomous_sheep/' target='_blank' rel='noopener noreferrer'>Exhibited At Hypha Studios 'HARD WIRED' Show 2024</a>",
   "media": [
     {
       "type": "vimeo",
@@ -34,7 +34,7 @@
     }
   ],
   "details": {
-    "technologies": ["Unity", "C#", "Blender", "Kit-Bashing", "Environment Design", "Gameplay Programming"],
+    "technologies": ["Unity", "UEFN", "C#", "Blender", "Kit-Bashing", "Environment Design", "Gameplay Programming"],
     "year": 2024,
     "client": "Hypha Studios"
   }

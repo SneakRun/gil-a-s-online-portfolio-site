@@ -1,0 +1,85 @@
+{
+  "title": "Concept Illustrations",
+  "thumbnails": [
+    "/images/concept-illustrations/concept-sketch-12.webp",
+    "/images/concept-illustrations/concept-sketch-7.webp",
+    "/images/concept-illustrations/concept-sketch-1.webp",
+    "/images/concept-illustrations/concept-sketch-2.webp",
+    "/images/concept-illustrations/concept-sketch-8.webp"
+  ],
+  "description": "Concept illustration sketches from my personal illustration practice.",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-12.webp",
+      "alt": "Concept illustration 12"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-7.webp",
+      "alt": "Concept illustration 7"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-1.webp",
+      "alt": "Concept illustration 1"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-2.webp",
+      "alt": "Concept illustration 2"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-8.webp",
+      "alt": "Concept illustration 8"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-11.webp",
+      "alt": "Concept illustration 11"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-3.webp",
+      "alt": "Concept illustration 3"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-4.webp",
+      "alt": "Concept illustration 4"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-5.webp",
+      "alt": "Concept illustration 5"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-6.webp",
+      "alt": "Concept illustration 6"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-9.webp",
+      "alt": "Concept illustration 9"
+    },
+    {
+      "type": "image",
+      "src": "/images/concept-illustrations/concept-sketch-10.webp",
+      "alt": "Concept illustration 10"
+    }
+  ],
+  "details": {
+    "technologies": [
+      "Digital Painting",
+      "Concept Art",
+      "Character Design",
+      "Visual Storytelling",
+      "Adobe Photoshop",
+      "Procreate"
+    ],
+    "year": 2023,
+    "client": "Personal Portfolio"
+  }
+}
